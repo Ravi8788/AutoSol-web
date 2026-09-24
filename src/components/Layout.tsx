@@ -95,9 +95,8 @@ export default function Layout() {
         <div className="container footer-bottom">
           <span>
             © {new Date().getFullYear()} AutoSol Technologies. All rights reserved.
-            <span style={{ display: "inline-flex", flexDirection: "column", marginLeft: "10px", verticalAlign: "top" }}>
-              <a href="tel:+918668686934" style={{ color: "inherit", lineHeight: 1.2, display: "block" }}>+91</a>
-              <a href="tel:+918668686934" style={{ color: "inherit", lineHeight: 1.2, display: "block" }}>86686 86934</a>
+            <span style={{ display: "inline-block", marginLeft: "10px" }}>
+              <a href="tel:+918668686934" style={{ color: "inherit", lineHeight: 1.2, whiteSpace: "nowrap" }}>+91 86686 86934</a>
             </span>
           </span>
           <a
