@@ -1945,6 +1945,32 @@ footer {
 
 .brand--footer {
   margin-bottom: 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand--footer .brand-image {
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  box-shadow: 0 16px 28px rgba(0, 191, 255, 0.18);
+}
+
+.brand--footer .brand-type {
+  line-height: 0.96;
+}
+
+.brand--footer .brand-type strong {
+  font-size: clamp(32px, 3vw, 44px);
+  letter-spacing: -0.06em;
+}
+
+.brand--footer .brand-type small {
+  margin-top: 8px;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  opacity: 0.8;
 }
 
 .footer-grid > div:first-child > p {
