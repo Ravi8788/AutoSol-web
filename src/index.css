@@ -2065,10 +2065,10 @@ footer {
 .footer-bottom-inner {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 12px 18px;
   flex-wrap: wrap;
-  width: 100%;
+  padding-right: 76px;
   box-sizing: border-box;
 }
 
@@ -2078,7 +2078,30 @@ footer {
   font-size: 12px;
   line-height: 1.4;
   letter-spacing: 0.01em;
-  text-align: center;
+  text-align: left;
+}
+
+.footer-policy-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+  color: #dfeaf8;
+  font-size: 12px;
+}
+
+.footer-policy-links a,
+.footer-policy-links span {
+  color: #dfeaf8;
+  text-decoration: none;
+  font-size: 12px;
+  pointer-events: none;
+  cursor: default;
+}
+
+.footer-policy-link {
+  color: #dfeaf8;
 }
 
 .footer-bottom-ig {
@@ -2273,11 +2296,16 @@ footer {
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    padding-right: 0;
   }
-  .footer-copyright {
+  .footer-copyright,
+  .footer-policy-links {
     width: 100%;
     justify-content: center;
     text-align: center;
+  }
+  .footer-policy-links {
+    gap: 8px 12px;
   }
 }
 
