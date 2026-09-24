@@ -100,20 +100,34 @@ export default function Layout() {
             </span>
             <span style={{ color: "inherit", lineHeight: 1.2 }}>Kolhapur, Maharashtra</span>
           </div>
-          <a
-            href="https://www.instagram.com/autosoltechnologies"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer-bottom-ig"
-            aria-label="Instagram"
-          >
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-            </svg>
-            Instagram
-          </a>
+          <div style={{ display: "flex", flexDirection: "column", gap: "10px", alignItems: "flex-start" }}>
+            <a
+              href="https://www.instagram.com/autosoltechnologies"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-bottom-ig"
+              aria-label="Instagram"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+              Instagram
+            </a>
+            <a
+              href="https://www.linkedin.com/in/autosoltechnologies-4b948043a?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-bottom-ig"
+              aria-label="LinkedIn"
+            >
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M6.94 8.5A1.5 1.5 0 1 1 6.94 5.5a1.5 1.5 0 0 1 0 3zm-1.25 1.06h2.5v8.44h-2.5V9.56zm4.11 0h2.39v1.15h.03c.33-.63 1.14-1.3 2.34-1.3 2.5 0 2.96 1.64 2.96 3.77v6.82h-2.5v-6.38c0-1.52-.03-3.47-2.11-3.47-2.12 0-2.44 1.65-2.44 3.35v6.5h-2.5V9.56z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </div>
         </div>
       </footer>
     </main>
