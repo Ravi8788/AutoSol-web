@@ -2057,13 +2057,16 @@ footer {
 .footer-bottom {
   padding-top: 23px;
   padding-bottom: 16px;
-  padding-right: 72px;
   border-top: 1px solid #17263c;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   color: #52647c;
   font-size: 9px;
+}
+
+.footer-bottom-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .footer-copyright {
@@ -2072,6 +2075,22 @@ footer {
   font-size: 15px;
   line-height: 1.4;
   letter-spacing: 0.01em;
+}
+
+.footer-policy-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+  flex-wrap: wrap;
+  color: #dfeaf8;
+  font-size: 15px;
+}
+
+.footer-policy-links a,
+.footer-policy-links span {
+  color: #dfeaf8;
+  text-decoration: none;
 }
 
 .footer-bottom-ig {

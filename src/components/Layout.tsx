@@ -117,8 +117,15 @@ export default function Layout() {
           </div>
         </div>
         <div className="container footer-bottom">
-          <div style={{ display: "flex", flexDirection: "column", gap: "6px", width: "100%", alignItems: "center", textAlign: "center" }}>
+          <div className="footer-bottom-inner">
             <span className="footer-copyright">© {new Date().getFullYear()} AutoSol Technologies. All rights reserved.</span>
+            <div className="footer-policy-links">
+              <Link to="/privacy-policy">Privacy Policy</Link>
+              <span>|</span>
+              <Link to="/terms-and-conditions">Terms &amp; Conditions</Link>
+              <span>|</span>
+              <Link to="/account-deletion">Account Deletion</Link>
+            </div>
           </div>
         </div>
       </footer>
