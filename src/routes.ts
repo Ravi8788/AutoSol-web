@@ -5,6 +5,7 @@ import Services from "./pages/Services";
 import ServiceDetail from "./pages/ServiceDetail";
 import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
+import Support from "./pages/Support";
 import Work from "./pages/Work";
 import ProjectDetail from "./pages/ProjectDetail";
 import Training from "./pages/Training";
@@ -21,6 +22,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, Component: Home },
       { path: "services", Component: Services },
+      { path: "services/support", Component: Support },
       { path: "services/:slug", Component: ServiceDetail },
       { path: "solutions", Component: Industries },
       { path: "products", Component: Products },

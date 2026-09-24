@@ -70,6 +70,22 @@ export default function Home() {
             <div className="visual-canvas">
               <span className="orbit orbit--one" />
               <span className="orbit orbit--two" />
+              {/* Connector lines from nodes to core */}
+              <svg className="vc-connectors" viewBox="0 0 480 390" aria-hidden="true">
+                {/* data → core */}
+                <line x1="130" y1="78" x2="240" y2="195" stroke="rgba(0,204,255,.22)" strokeWidth="1" strokeDasharray="4 4"/>
+                {/* automation → core */}
+                <line x1="350" y1="78" x2="240" y2="195" stroke="rgba(0,82,232,.22)" strokeWidth="1" strokeDasharray="4 4"/>
+                {/* software → core */}
+                <line x1="130" y1="312" x2="240" y2="195" stroke="rgba(0,82,232,.22)" strokeWidth="1" strokeDasharray="4 4"/>
+                {/* outcome → core */}
+                <line x1="350" y1="312" x2="240" y2="195" stroke="rgba(0,204,255,.22)" strokeWidth="1" strokeDasharray="4 4"/>
+              </svg>
+              {/* Particles ON the connector lines (midpoints) */}
+              <span className="particle vc-p1" />
+              <span className="particle vc-p2" />
+              <span className="particle vc-p3" />
+              <span className="particle vc-p4" />
               <div className="core">
                 <span className="core-pulse" />
                 <small>AUTOSOL</small>
@@ -80,7 +96,6 @@ export default function Home() {
               <div className="node node--automation"><Icon name="automation" /><span>AUTOMATION</span></div>
               <div className="node node--software"><Icon name="code" /><span>SOFTWARE</span></div>
               <div className="node node--outcome"><Icon name="growth" /><span>OUTCOME</span></div>
-              <span className="particle p1" /><span className="particle p2" /><span className="particle p3" />
             </div>
             <div className="visual-footer">
               <span><i /> Data flowing</span>
@@ -145,18 +160,37 @@ export default function Home() {
       <section className="section process">
         <div className="container">
           <SectionHead
-            eyebrow="Our approach"
+            eyebrow="OUR APPROACH"
             title="From idea to impact."
             copy="A clear, collaborative path from business context to a system that keeps improving."
           />
-          <div className="process-line">
-            {["Discover", "Design", "Build", "Integrate", "Deploy", "Improve"].map((step, index) => (
-              <div className="process-step" key={step}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <i />
-                <strong>{step}</strong>
+          <div className="process-bento">
+            {[
+              { num: "01", title: "Discover", copy: "Understand your business, goals and the real problem we are solving." },
+              { num: "02", title: "Design", copy: "Plan the solution architecture, user experience and technical blueprint." },
+              { num: "03", title: "Build", copy: "Develop with iterative feedback, code quality and technical precision." },
+              { num: "04", title: "Integrate", copy: "Connect with your existing tools, data sources and business workflows." },
+              { num: "05", title: "Deploy", copy: "Ship to production with quality checks and performance validation." },
+              { num: "06", title: "Improve", copy: "Monitor, learn and continuously evolve the system over time." },
+            ].map((step) => (
+              <div key={step.num} className="process-bento-card" data-num={step.num}>
+                <span className="pbc-num">{step.num}</span>
+                <h3 className="pbc-title">{step.title}</h3>
+                <p className="pbc-copy">{step.copy}</p>
               </div>
             ))}
+          </div>
+
+          {/* Technology Care card */}
+          <div className="home-support-card">
+            <div>
+              <div className="home-support-badge"><i style={{ width: 6, height: 6, borderRadius: "50%", background: "var(--cyan)", display: "inline-block" }} />12-MONTH SUPPORT</div>
+              <h3>BUILD. LAUNCH. STAY SUPPORTED.</h3>
+              <p>Selected AutoSol projects can include a 12-Month Technology Care period after delivery — structured post-launch support so your investment keeps moving forward.</p>
+            </div>
+            <Link to="/services/support" className="button button--primary" style={{ whiteSpace: "nowrap", minHeight: "50px", fontSize: "14px" }}>
+              Explore Technology Care <Arrow />
+            </Link>
           </div>
         </div>
       </section>

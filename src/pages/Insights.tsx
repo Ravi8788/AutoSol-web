@@ -161,11 +161,21 @@ export default function Insights() {
           <h2 style={{ fontSize: "clamp(1.8rem, 3vw, 2.8rem)", letterSpacing: "-.04em", color: "white", marginBottom: "40px" }}>
             From Idea to Implementation
           </h2>
-          <div className="flow-diagram">
-            {PROCESS_STEPS.map((step, index) => (
-              <div className="flow-step" key={step}>
-                <span>{step}</span>
-                {index < PROCESS_STEPS.length - 1 && <i>→</i>}
+          <div className="process-bento process-bento--dark">
+            {[
+              { num: "01", title: "Problem", copy: "Identify the real business challenge worth solving." },
+              { num: "02", title: "Research", copy: "Understand context, constraints and existing systems." },
+              { num: "03", title: "Design", copy: "Define the solution architecture and experience." },
+              { num: "04", title: "Build", copy: "Develop with precision, feedback and iteration." },
+              { num: "05", title: "Integrate", copy: "Connect to tools, data sources and workflows." },
+              { num: "06", title: "Test", copy: "Validate for quality, performance and edge cases." },
+              { num: "07", title: "Deploy", copy: "Ship to production with care and monitoring." },
+              { num: "08", title: "Improve", copy: "Keep evolving based on real usage and feedback." },
+            ].map((step) => (
+              <div key={step.num} className="process-bento-card process-bento-card--dark" data-num={step.num}>
+                <span className="pbc-num">{step.num}</span>
+                <h3 className="pbc-title" style={{ color: "white" }}>{step.title}</h3>
+                <p className="pbc-copy" style={{ color: "#7a8fa5" }}>{step.copy}</p>
               </div>
             ))}
           </div>

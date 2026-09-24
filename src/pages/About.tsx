@@ -90,12 +90,19 @@ export default function About() {
             <h2>A clear path from context to outcome.</h2>
             <p className="section-copy">We start with your business problem and work through a structured, collaborative process to deliver systems that keep improving.</p>
           </div>
-          <div className="process-line">
-            {["Discover", "Design", "Build", "Integrate", "Deploy", "Improve"].map((step, index) => (
-              <div className="process-step" key={step}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <i />
-                <strong>{step}</strong>
+          <div className="process-bento">
+            {[
+              { num: "01", title: "Discover", copy: "Understand your business, goals and the real problem we are solving." },
+              { num: "02", title: "Design", copy: "Plan the solution architecture, user experience and technical blueprint." },
+              { num: "03", title: "Build", copy: "Develop with iterative feedback, code quality and technical precision." },
+              { num: "04", title: "Integrate", copy: "Connect with your existing tools, data sources and business workflows." },
+              { num: "05", title: "Deploy", copy: "Ship to production with quality checks and performance validation." },
+              { num: "06", title: "Improve", copy: "Monitor, learn and continuously evolve the system over time." },
+            ].map((step) => (
+              <div key={step.num} className="process-bento-card" data-num={step.num}>
+                <span className="pbc-num">{step.num}</span>
+                <h3 className="pbc-title">{step.title}</h3>
+                <p className="pbc-copy">{step.copy}</p>
               </div>
             ))}
           </div>

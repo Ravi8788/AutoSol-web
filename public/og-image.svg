@@ -1,0 +1,24 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#090E1B"/>
+  <rect x="36" y="36" width="1128" height="558" rx="28" fill="url(#paint0_linear_1_2)" fill-opacity="0.18" stroke="#2DD4BF" stroke-opacity="0.5"/>
+  <circle cx="184" cy="164" r="110" fill="#0EA5E9" fill-opacity="0.12"/>
+  <circle cx="1024" cy="490" r="150" fill="#8B5CF6" fill-opacity="0.12"/>
+  <path d="M212 316C212 291.595 231.595 272 256 272H511C535.405 272 555 291.595 555 316V314C555 338.405 535.405 358 511 358H256C231.595 358 212 338.405 212 314V316Z" fill="#0EA5E9" fill-opacity="0.18"/>
+  <path d="M604 250L742 250C766.301 250 786 269.699 786 294V294C786 318.301 766.301 338 742 338H604C579.699 338 560 318.301 560 294V294C560 269.699 579.699 250 604 250Z" fill="#2DD4BF" fill-opacity="0.18"/>
+  <path d="M640 402L858 402C882.301 402 902 421.699 902 446V446C902 470.301 882.301 490 858 490H640C615.699 490 596 470.301 596 446V446C596 421.699 615.699 402 640 402Z" fill="#F59E0B" fill-opacity="0.18"/>
+  <path d="M246 208L344 208L386 276L486 276L430 328L538 328L418 432L350 336L246 336L312 276L246 208Z" fill="#F8FAFC" fill-opacity="0.92"/>
+  <path d="M652 190H880C905.405 190 926 210.595 926 236V236C926 261.405 905.405 282 880 282H652C626.595 282 606 261.405 606 236V236C606 210.595 626.595 190 652 190Z" fill="#38BDF8" fill-opacity="0.1"/>
+  <path d="M610 256H838" stroke="#38BDF8" stroke-width="12" stroke-linecap="round"/>
+  <path d="M610 456H824" stroke="#A78BFA" stroke-width="12" stroke-linecap="round"/>
+  <text x="110" y="150" fill="#E2E8F0" font-family="Arial, Helvetica, sans-serif" font-size="28" letter-spacing="6">AUTOSOL TECHNOLOGIES</text>
+  <text x="110" y="372" fill="#F8FAFC" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="700">BUILD SMARTER.</text>
+  <text x="110" y="462" fill="#7DD3FC" font-family="Arial, Helvetica, sans-serif" font-size="92" font-weight="700">AUTOMATE FASTER.</text>
+  <text x="110" y="534" fill="#CBD5E1" font-family="Arial, Helvetica, sans-serif" font-size="32">AI • SOFTWARE • AUTOMATION • GROWTH</text>
+  <defs>
+    <linearGradient id="paint0_linear_1_2" x1="50" y1="76" x2="1136" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0EA5E9"/>
+      <stop offset="0.5" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+</svg>

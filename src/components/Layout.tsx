@@ -2,6 +2,7 @@ import { useState } from "react";
 import { NavLink, Link, Outlet } from "react-router";
 import logo from "@/imports/logo_attachment2.jpeg";
 import ScrollToTop from "./ScrollToTop";
+import WhatsAppButton from "./WhatsAppButton";
 
 function Arrow() {
   return <span className="arrow" aria-hidden="true">→</span>;
@@ -45,6 +46,7 @@ export default function Layout() {
             <NavLink to="/work" onClick={closeMenu}>Work</NavLink>
             <NavLink to="/training" onClick={closeMenu}>Training</NavLink>
             <NavLink to="/insights" onClick={closeMenu}>Insights</NavLink>
+            <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
             <Link to="/contact" className="mobile-contact" onClick={closeMenu}>
               Contact us <Arrow />
             </Link>
@@ -63,12 +65,27 @@ export default function Layout() {
 
       <Outlet />
 
+      <WhatsAppButton />
       <footer>
         <div className="container footer-grid">
           <div>
             <Brand footer />
             <p>From ideas to intelligent systems.</p>
             <strong>BUILD. AUTOMATE. GROW.</strong>
+            <a
+              href="https://www.instagram.com/autosoltechnologies"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-instagram"
+              aria-label="AutoSol Technologies on Instagram"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+              @autosoltechnologies
+            </a>
           </div>
           <div className="footer-links">
             <h3>Company</h3>
@@ -90,8 +107,21 @@ export default function Layout() {
           </div>
         </div>
         <div className="container footer-bottom">
-          <span>© {new Date().getFullYear()} AutoSol Technologies. All rights reserved.</span>
-          <span>Privacy · Terms · Cookies</span>
+          <span>© {new Date().getFullYear()} AutoSol Technologies. All rights reserved. &nbsp;|&nbsp; <a href="tel:+918668686934" style={{ color: "inherit" }}>+91 86686 86934</a></span>
+          <a
+            href="https://www.instagram.com/autosoltechnologies"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="footer-bottom-ig"
+            aria-label="Instagram"
+          >
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+            Instagram
+          </a>
         </div>
       </footer>
     </main>

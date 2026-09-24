@@ -175,6 +175,15 @@ export const services: Service[] = [
     group: "Business & Professional",
     capabilities: ["AI & GenAI", "Agentic AI", "Python", "Data Science", "Machine Learning", "LLM Engineering", "Full Stack", "Web Development", "Mobile", "Cloud", "IoT", "UI/UX", "Digital Marketing"],
   },
+  {
+    slug: "support",
+    name: "12-Month Technology Care",
+    icon: "code",
+    copy: "Structured post-launch technical support for eligible project engagements. Build. Launch. Stay Supported.",
+    tags: ["Post-launch support", "Bug resolution", "Technical guidance", "Project continuity"],
+    group: "Business & Professional",
+    capabilities: ["Bug & issue support", "Technical guidance", "Deployment assistance", "Minor adjustments", "Maintenance guidance", "Project continuity"],
+  },
 ];
 
 export type Project = {
