@@ -117,7 +117,7 @@ export default function Layout() {
           </div>
         </div>
         <div className="container footer-bottom">
-          <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "6px", width: "100%", alignItems: "center", textAlign: "center" }}>
             <span className="footer-copyright">© {new Date().getFullYear()} AutoSol Technologies. All rights reserved.</span>
           </div>
         </div>
