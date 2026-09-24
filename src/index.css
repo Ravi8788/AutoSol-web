@@ -2066,13 +2066,13 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 12px;
 }
 
 .footer-copyright {
   display: block;
   color: #dfeaf8;
-  font-size: 15px;
+  font-size: 12px;
   line-height: 1.4;
   letter-spacing: 0.01em;
 }
@@ -2081,16 +2081,17 @@ footer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 14px;
+  gap: 10px;
   flex-wrap: wrap;
   color: #dfeaf8;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .footer-policy-links a,
 .footer-policy-links span {
   color: #dfeaf8;
   text-decoration: none;
+  font-size: 12px;
 }
 
 .footer-bottom-ig {

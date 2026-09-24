@@ -123,8 +123,6 @@ export default function Layout() {
               <Link to="/privacy-policy">Privacy Policy</Link>
               <span>|</span>
               <Link to="/terms-and-conditions">Terms &amp; Conditions</Link>
-              <span>|</span>
-              <Link to="/account-deletion">Account Deletion</Link>
             </div>
           </div>
         </div>
