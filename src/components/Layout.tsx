@@ -93,12 +93,13 @@ export default function Layout() {
           </div>
         </div>
         <div className="container footer-bottom">
-          <span>
-            © {new Date().getFullYear()} AutoSol Technologies. All rights reserved.
-            <span style={{ display: "inline-block", marginLeft: "10px" }}>
+          <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
+            <span>© {new Date().getFullYear()} AutoSol Technologies. All rights reserved.</span>
+            <span style={{ display: "inline-block" }}>
               <a href="tel:+918668686934" style={{ color: "inherit", lineHeight: 1.2, whiteSpace: "nowrap" }}>+91 86686 86934</a>
             </span>
-          </span>
+            <span style={{ color: "inherit", lineHeight: 1.2 }}>Kolhapur, Maharashtra</span>
+          </div>
           <a
             href="https://www.instagram.com/autosoltechnologies"
             target="_blank"
