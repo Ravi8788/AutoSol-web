@@ -1973,6 +1973,32 @@ footer {
   opacity: 0.8;
 }
 
+.footer-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0 14px;
+}
+
+.footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: #dfe9f5;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.footer-socials a:hover {
+  transform: translateY(-1px);
+  background: rgba(0, 204, 255, 0.12);
+  color: white;
+}
+
 .footer-grid > div:first-child > p {
   margin-bottom: 7px;
   color: #8494a9;
