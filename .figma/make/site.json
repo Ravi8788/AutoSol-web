@@ -1,0 +1,12 @@
+{
+  "title": "AutoSol Technologies | AI, Software & Automation Solutions",
+  "description": "AutoSol Technologies builds AI systems, custom software, automation workflows, CRM, ERP, web and mobile applications for growing businesses. Connected intelligence for the next generation of business.",
+  "language": "en",
+  "robots": {
+    "index": true
+  },
+  "accessibility": {
+    "addBypassLinks": true,
+    "ignoreReducedMotion": false
+  }
+}

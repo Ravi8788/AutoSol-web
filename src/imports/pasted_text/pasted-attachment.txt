@@ -1,0 +1,1430 @@
+# AUTOSOL TECHNOLOGIES — Website Design & Build Brief
+### Enhanced Edition — UI, Design System & Color Focus
+
+> **What's new in this version:** a complete design-token system (color, type, spacing, elevation, motion) with exact values instead of general direction; explicit color-usage ratios and a section-by-section color map so the dark/light rhythm is deliberate, not arbitrary; component-level UI specs (buttons, cards, badges, forms) with defined states; and light-section tokens to complement the dark palette that was already defined. All original brand facts, copy, founders, projects and content rules are preserved unchanged.
+
+---
+
+## 0. PROJECT BRIEF
+
+**Company:** AutoSol Technologies
+**Tagline:** BUILD. AUTOMATE. GROW.
+**Positioning:** AI • Software • Automation • Data • Growth • IoT
+
+This is **not** a generic IT-services template. It is a premium, product-focused technology startup website that communicates AutoSol builds intelligent digital systems — AI, software, automation, data, SaaS, IoT, cloud, integrations, digital growth, and technology consulting — for real businesses.
+
+**Primary goals:** brand building, client enquiries, showcasing services/projects/products-in-progress, technical capability, founders/team, training programs, and a premium startup identity.
+
+**Hard content rule (applies to every section below):** never fabricate clients, revenue, users, awards, partners, reviews, certifications, statistics, funding, or history. Where real data isn't supplied, use a visible editable placeholder (e.g. `[PROJECT IMAGE]`, `[FOUNDER PHOTO]`, `[CLIENT REVIEW]`) — never invent a number to fill the gap.
+
+---
+
+## 1. CREATIVE DIRECTION — "CONNECTED INTELLIGENCE"
+
+Visualize this pipeline throughout the site, in diagrams, transitions, and layout logic:
+
+```
+Business Problem → Data → AI → Automation → Software → Business Outcome
+```
+
+**Feel:** modern AI startup + product company + engineering studio + digital innovation lab.
+**Reference quality bar (inspiration only — never copy layout, text, or identity):** Vercel, Linear, Framer, Stripe.
+
+**Use:** dark futuristic sections mixed with clean light sections, editorial typography, bento layouts, large type, subtle gradients, thin technical grid lines, network/node patterns, data-flow animation, dashboard mockups, soft glow, minimal glass surfaces, strong whitespace, premium case-study layouts.
+
+**Avoid:** generic robot illustrations, stock photos, excessive glassmorphism or neon, random 3D props, corporate-blue template feel, over-rounded cards everywhere, fabricated stats/logos/testimonials, gradient overload, motion that hurts usability.
+
+---
+
+## 2. DESIGN SYSTEM
+*(This section is the core enhancement — every visual decision in the rest of the brief should trace back to these tokens.)*
+
+### 2.1 Color System
+
+**Brand core (as specified — do not alter):**
+
+| Token | Hex | Role |
+|---|---|---|
+| Electric Blue | `#2563EB` | Primary action, links, primary accent |
+| AI Purple | `#7C3AED` | AI/intelligence accent — used sparingly |
+| Cyan | `#06B6D4` | Secondary accent, data/motion accent |
+| Success | `#22C55E` | Positive states, progress, "live" indicators |
+| Deep Background | `#07111F` | Darkest section background |
+| Dark Surface | `#0D1728` | Secondary dark background |
+| Card (dark) | `#111C2E` | Card fill on dark sections |
+| Border (dark) | `#20304A` | Hairline borders, 1px, on dark |
+| Primary Text (dark bg) | `#F8FAFC` | Headlines/body on dark |
+| Secondary Text (dark bg) | `#CBD5E1` | Supporting text on dark |
+| Muted | `#94A3B8` | Captions, disabled, meta text |
+| White | `#FFFFFF` | Light backgrounds, dark-bg text on buttons |
+
+**Functional colors (added — needed for forms/states, kept neutral so they never compete with the brand palette):**
+
+| Token | Hex | Role |
+|---|---|---|
+| Warning | `#F59E0B` | Form warnings, "pending" status |
+| Error | `#EF4444` | Form errors, destructive actions |
+
+**Light-section complements (added — the brief calls for "clean white sections" but only defined dark tokens; these pair with the existing dark set):**
+
+| Token | Hex | Role |
+|---|---|---|
+| Light Background | `#FFFFFF` | Base for light sections |
+| Light Surface | `#F8FAFC` | Alternate light background (subtle zebra between sections) |
+| Card (light) | `#FFFFFF` | Card fill on light sections, with border below |
+| Border (light) | `#E2E8F0` | Hairline borders on light |
+| Primary Text (light bg) | `#0B1220` | Headlines/body on light |
+| Secondary Text (light bg) | `#475569` | Supporting text on light |
+
+**Main gradient:** `#2563EB → #06B6D4 → #7C3AED` (135°, blue-to-purple left-to-right or top-to-bottom).
+
+**Usage rules — this is what keeps the site premium instead of "overloaded":**
+1. **60 / 30 / 10 ratio per section:** ~60% neutral background/surface, ~30% text and structural elements (borders, icons, secondary text), ~10% brand accent color/gradient.
+2. Gradient is reserved for: hero background wash, primary CTA hover glow, section divider lines, product/AI visuals, and at most one headline accent word per major section — **never** as a full-bleed fill behind body copy, and never on more than ~15% of a single viewport.
+3. Text never sits directly on a multi-stop gradient without a solid or 80%+ opacity scrim behind it.
+4. AI Purple is the rarest color in the palette — reserve it for AI/intelligence-specific moments (Products, AI & GenAI service, Product Philosophy). If a section isn't about AI specifically, lead with Electric Blue or Cyan instead.
+5. Minimum contrast: body text ≥ 4.5:1 against its background; large headline text ≥ 3:1. Test Primary Text `#F8FAFC` on Deep Background `#07111F` (passes), and Secondary Text `#475569` on Light Background `#FFFFFF` (passes) before shipping.
+
+**Section color map — assigns a deliberate background + lead accent to every section so the dark/light rhythm reads as intentional:**
+
+| Section | Background | Lead Accent |
+|---|---|---|
+| Hero | Deep Background | Full gradient (nodes, glow) |
+| Hero Secondary Statement | Dark Surface | Cyan (diagram lines) |
+| What We Build (Services) | White | Electric Blue (icons, hover borders) |
+| Our Approach (Process) | Light Surface | Blue→Cyan gradient, line only |
+| Technology Capabilities | Dark Surface | Cyan (constellation nodes) |
+| Products | Deep Background | Purple + Cyan |
+| Product Philosophy | Deep Background | Blue/Purple gradient, headline only |
+| Projects / Our Work | White | Electric Blue (tags, overlays) |
+| Industries | Light Surface | Cyan (hover highlight) |
+| Why AutoSol | White | Electric Blue (icons) |
+| Training | Light Surface | Success Green + Blue |
+| Performance Marketing | Dark Surface | Cyan/Green funnel |
+| Founders | White | Electric Blue (card hover) |
+| Future Vision | Deep Background | Full gradient (convergence diagram) |
+| Insights / Blog | Light Surface | Electric Blue (category tags) |
+| Contact / Final CTA | Deep Background | Full gradient (form focus, CTA) |
+
+### 2.2 Typography System
+
+**Fonts:** Inter (primary — UI, body, nav, forms) · Manrope (display — large headlines only). Max two typefaces. An italic serif/accent face may appear on **one or two words per page at most**, as an editorial flourish — never paragraphs.
+
+**Fluid type scale** (desktop → mobile via `clamp()`):
+
+| Style | Size | Weight | Line-height | Tracking |
+|---|---|---|---|---|
+| Display / H1 | `clamp(2.5rem, 5vw, 5.5rem)` | 700–800 | 1.05 | −0.02em |
+| H2 | `clamp(2rem, 3.5vw, 3rem)` | 700 | 1.1 | −0.01em |
+| H3 | `clamp(1.5rem, 2.5vw, 2rem)` | 600 | 1.2 | normal |
+| Body Large | 1.125rem | 400–500 | 1.6 | normal |
+| Body | 1rem | 400 | 1.6 | normal |
+| Caption / Eyebrow | 0.875rem | 600, uppercase | 1.4 | 0.08em |
+| Button | 0.9375rem | 600 | 1 | 0.01em |
+
+### 2.3 Spacing, Grid & Layout
+
+- **Base unit:** 8pt scale — 4, 8, 12, 16, 24, 32, 48, 64, 96, 128, 160.
+- **Section vertical padding:** 160px desktop / 96px tablet / 64px mobile.
+- **Container:** max-width 1400px, gutter 24px desktop / 16px mobile.
+- **Grid:** 12-column desktop, 8-column tablet, 4-column mobile (bento grids collapse to single/double column on mobile — never squeeze a 3-up grid into mobile width).
+
+### 2.4 Elevation, Radius & Surfaces
+
+**Radius scale:** 8px (badges, tags) · 12px (buttons, inputs) · 16px (cards) · 24px (feature panels, hero visual) · 999px (status pills).
+
+**Shadow & glow tokens:**
+- Light sections: soft ambient shadow, `0 8px 24px rgba(15,23,42,0.06)`, on hover `0 16px 40px rgba(15,23,42,0.10)`.
+- Dark sections: colored glow instead of shadow, e.g. `0 0 40px rgba(37,99,235,0.25)` on hover for blue-accented elements, `rgba(124,58,237,0.25)` for AI/purple elements.
+
+**Glass surface spec** (used sparingly — nav-on-scroll, hero product mockup frame, one or two key callouts; **not** every card): background `rgba(17,28,46,0.6)`, backdrop-blur 16–20px, 1px border `rgba(255,255,255,0.08)`.
+
+### 2.5 Iconography & Imagery
+
+- Line-style icons, 1.5–2px stroke, consistent corner radius on icon glyphs.
+- No stock photography of generic offices/handshakes/robots. Imagery is either: real project/product screenshots, clearly-labeled mockups (see Projects section), or abstract system diagrams (nodes, lines, geometric shapes) built from the brand palette.
+- Product/dashboard mockups use the dark palette with brand-accent data visualizations — treated as real interface design, not decorative illustration.
+
+### 2.6 Core UI Components
+
+**Buttons**
+- *Primary:* solid Electric Blue fill (gradient shift to Cyan on hover), white text, radius 12px, padding 14×28px, arrow glyph that shifts 4px right on hover.
+- *Secondary:* 1px border in current section's text color at 20% opacity, transparent fill, fills to a subtle tint on hover.
+- *Ghost/text link:* no fill or border, underline or arrow-only hover motion.
+- *States:* default → hover (150–200ms) → active (slight scale/darken) → focus-visible (2px outline, 2px offset, Electric Blue) → disabled (40% opacity, no pointer events).
+
+**Cards** (service / project / product / founder / blog — one consistent base, varied content)
+- Padding 24–32px, radius 16px, 1px border (Border token for the section's mode).
+- Hover: `translateY(-4px)`, border shifts to brand accent, glow/shadow per 2.4. No scale-up inside grids (avoids layout shift/overlap).
+
+**Status badges/pills** (radius 999px, small dot + label): `IN DEVELOPMENT` (amber), `PRODUCT VISION` (purple), `CAPSTONE / PROJECT` (slate), `CONCEPT / PROTOTYPE / HACKATHON PROJECT` (cyan outline). Never a green "live" badge on something that isn't live.
+
+**Forms**
+- Top-aligned labels, radius 12px inputs, 1px border, 2px Electric Blue focus ring.
+- Error state: red border + inline helper text (never color alone — pair with an icon/text for accessibility).
+
+### 2.7 Motion System
+
+Motion is a major part of the site — but controlled, technical, premium. Never bouncy or cartoonish.
+
+**Easing:** `cubic-bezier(0.16, 1, 0.3, 1)` for entrances (fast-out, gentle settle) · `cubic-bezier(0.65, 0, 0.35, 1)` for hover/state transitions.
+**Durations:** micro-interactions 150–200ms · card hover 250ms · section scroll-reveal 500–700ms · page/route transition 300–400ms.
+**Stagger:** 60–90ms between sibling elements (text lines, card grids).
+
+**Hero choreography (kept from original spec, now with exact timing):**
+
+| Time | Event |
+|---|---|
+| 0.00s | Background gradient + network lines appear |
+| 0.15s | Logo fades in |
+| 0.25s | Eyebrow text rises |
+| 0.35s | Headline line 1 |
+| 0.45s | Headline line 2 |
+| 0.55s | Headline line 3 |
+| 0.70s | Supporting description fades in |
+| 0.85s | CTA buttons rise |
+| 1.00s | Technology/dashboard visual animates in |
+| 1.15s | Connected nodes activate |
+
+**Also use:** scroll-triggered reveal (fade + translate), image parallax, gradient movement, glowing data nodes, magnetic CTA hover, horizontal marquee (tech stack), number/count-up **only where real data exists**, dashboard micro-interactions, cursor-responsive background glow on desktop only (not mobile), mobile menu slide-down.
+
+**Accessibility:** full `prefers-reduced-motion` support — replace transforms with opacity-only fades, disable parallax and cursor-glow when reduced motion is requested.
+
+---
+
+## 3. GLOBAL NAVIGATION
+
+**Desktop:** Logo (left) · Home / Services / Solutions / Products / Work / Training / Insights (center) · Contact Us + optional "Start a Project →" (right).
+**Behavior:** transparent over hero; on scroll, becomes a glass surface (per 2.4 spec) matching the current section's mode (dark or light), with a thin border and smooth transition.
+**Mobile:** logo + hamburger, opening a smooth full-width panel (slide-down, per motion tokens).
+
+---
+
+## 4. HERO SECTION
+
+**Background:** Deep Background `#07111F`, abstract "connected intelligence" node/line system (not a robot) visualizing: Business Data → AI → Automation → Software → Growth.
+
+**Eyebrow:** `AI • SOFTWARE • AUTOMATION • DATA • GROWTH • IoT`
+**Headline:**
+```
+BUILD SMARTER.
+AUTOMATE FASTER.
+GROW FURTHER.
+```
+**Supporting copy:** "We build AI-powered software, automation systems and digital solutions that help businesses work smarter, move faster and grow with technology."
+**CTAs:** `START A PROJECT →` (primary) · `EXPLORE OUR WORK` (secondary/ghost)
+**Below CTAs:** AI Systems · Software · Automation · Data · Growth · IoT
+
+**Right side:** a real conceptual product-dashboard visual (Data / AI / Automation / Applications / Analytics) with subtle moving data lines — treated as genuine interface design per 2.5, not a fake OS.
+
+---
+
+## 5. HERO SECONDARY STATEMENT
+
+Split layout — Dark Surface background.
+**Left (large statement):** "Technology should not make business more complicated. It should make it smarter."
+**Left (supporting):** AutoSol Technologies combines software engineering, artificial intelligence, automation, data and digital growth into practical technology solutions.
+**Right:** animated connected-system diagram, Cyan-led per section color map.
+
+---
+
+## 6. WHAT WE BUILD — SERVICES
+
+Heading: `WHAT WE BUILD` · Subheading: "From intelligent automation to complete digital systems."
+White background, Electric Blue accent, premium bento grid using the Card component (2.6). Each card: icon, short description, technology tags, arrow, hover motion. Clicking opens a dedicated service page.
+
+**15 service groups (content unchanged from source):**
+
+1. **AI & GenAI** — Generative AI, LLM Integration, AI Assistants, AI Agents, RAG, Embeddings, Vector Search, Document Intelligence, Recommendations, Prompt Engineering, AI APIs, AI Consulting
+2. **AI Automation** — AI Agents, Workflow Automation, Business Automation, CRM Automation, WhatsApp Automation, Email Automation, Document Automation, Lead Automation, Customer Support Automation, Human-in-the-loop workflows
+3. **Software Development** — Custom Software, Business Applications, Admin Dashboards, Portals, Backend Systems, APIs, Database Systems, Enterprise Applications
+4. **Web Development** — Business Websites, Corporate Websites, SaaS Websites, Landing Pages, Web Applications, E-Commerce, PWA, Responsive Websites
+5. **Mobile Development** — Android, iOS, Flutter, React Native, Cross-platform, Business Apps, Customer Apps
+6. **SaaS & Product Development** — MVP Development, SaaS Architecture, Multi-Tenant Apps, Authentication, Subscriptions, Dashboards, Payments, Product Engineering
+7. **CRM / ERP / Business Systems** — CRM, ERP, Sales Management, Inventory, Purchase, Lead Management, Customer Management, Workflow Systems, Business Dashboards
+8. **Data & Analytics** — Data Processing, BI, Analytics, Dashboards, Machine Learning, Predictive Analytics, Data Visualization, Data Pipelines
+9. **Performance Marketing** — Meta Ads, Google Ads, Lead Generation, Retargeting, Conversion Optimization, Campaign Analytics, Marketing Automation, ROI/ROAS Analysis
+10. **SEO** — Technical, On-Page, Off-Page, Local, Keyword Research, Competitor Research, Content Strategy, Audits, Core Web Vitals, Schema, Search Console, Analytics, Reporting
+11. **IoT & Smart Systems** — IoT, Sensors, Device Integration, Monitoring, Real-time Dashboards, Device APIs, AI + IoT, Smart Systems
+12. **Cloud & DevOps** — Cloud Deployment, Docker, CI/CD, API Deployment, Infrastructure, Monitoring, Scaling
+13. **UI/UX Design** — UX Research, Wireframes, UI Design, Design Systems, SaaS Dashboards, Mobile UI, Prototypes
+14. **API & System Integration** — REST APIs, Webhooks, Payment Integration, WhatsApp Business API, AI APIs, CRM/ERP Integration, Data Synchronization
+15. **Technology Consulting** — AI Strategy, Architecture, Digital Transformation, Automation Strategy, Product Strategy, MVP Planning
+
+---
+
+## 7. OUR APPROACH — PROCESS
+
+Heading: `FROM IDEA TO IMPACT` · Light Surface background, Blue→Cyan gradient flow line only (never a filled gradient background).
+
+`01 Discover` → `02 Design` → `03 Build` → `04 Integrate` → `05 Deploy` → `06 Improve`
+
+Animated horizontal flow line connects all six stages; on mobile, this becomes a vertical flow (per 8.3 responsive rules).
+
+---
+
+## 8. TECHNOLOGY CAPABILITIES
+
+Dark Surface background, "technology constellation" visual, Cyan-led. Present as capability categories — **not** as certifications or official partnerships unless real.
+
+- **AI/ML:** Python, LLMs, RAG, Embeddings, Vector Databases, TensorFlow, PyTorch
+- **Frontend:** React, Next.js, Flutter, HTML, CSS, JavaScript, TypeScript
+- **Backend:** Node.js, Express, FastAPI, Python, REST APIs
+- **Database:** PostgreSQL, MySQL, MongoDB, Firebase, SQLite
+- **Cloud/DevOps:** Docker, Git, GitHub, CI/CD, Cloud Platforms
+- **Data:** Python, Pandas, NumPy, Scikit-learn, Power BI, Data Visualization
+- **Integrations:** Razorpay, WhatsApp Business API, Payment APIs, REST, Webhooks
+
+---
+
+## 9. PRODUCTS
+
+Heading: `PRODUCTS WE ARE BUILDING` · Subheading: "Turning our engineering capabilities into intelligent products." Deep Background, Purple + Cyan lead.
+
+**Product 01 — AutoSol AI Core** · Status: `IN DEVELOPMENT`
+"A shared intelligence layer powering future AutoSol products and intelligent business workflows."
+Potential capabilities: LLM Integration, Prompt Management, Structured Outputs, Embeddings, RAG, Vector Search, Tool Calling, AI Agents, AI Workflows, Evaluation, AI Security, Model Routing, Business Context, AI Cost Tracking.
+Visual: central AI core connected to CRM, Business OS, Analytics, Automation, Documents, Integrations.
+
+**Product 02 — AutoSol CRM** · Status: `IN DEVELOPMENT`
+Headline: "Manage. Automate. Grow." — "An AI-powered CRM concept designed for small and growing businesses to manage leads, customers, follow-ups, communication and sales activities from one connected workspace."
+Features: Dashboard, Leads, Customers, Contacts, Deals, Follow-ups, Tasks, Activities, Communication, AI Assistant, AI Lead Scoring, Business Memory, Analytics, Automation.
+Pipeline: `New → Contacted → Qualified → Quotation → Negotiation → Won/Lost`
+AI capabilities: customer summaries, lead scoring, follow-up suggestions, next-best-action, AI reports, reply drafting, business Q&A.
+Visual: realistic premium CRM dashboard mockup (Card + glow tokens).
+
+**Product 03 — AutoSol Business OS** · Status: `PRODUCT VISION / IN DEVELOPMENT`
+Headline: "One connected operating system for your business."
+"A long-term product vision connecting CRM, sales, inventory, purchase, marketing, projects, analytics, automation and AI into one business platform."
+Modules: CRM, Sales, Inventory, Purchase, Marketing, Projects, Tasks, Documents, Analytics, Automation, AI.
+Visual: central OS connected to all modules.
+
+**Never claim these are already launched** — always show `IN DEVELOPMENT` / `PRODUCT VISION` badges (per 2.6).
+
+---
+
+## 10. PRODUCT PHILOSOPHY
+
+Deep Background, large display type.
+```
+USE. INTEGRATE. CUSTOMIZE. IMPROVE. OWN.
+```
+"We use the best available technologies where they make sense. We build the workflows, intelligence, integrations, data systems, evaluations and experiences that create real differentiation."
+Highlight line: **BUY THE COMMODITY. BUILD THE DIFFERENTIATION.**
+Include an animated architecture diagram (node/line style, Blue/Purple gradient accent).
+
+---
+
+## 11. PROJECTS — OUR WORK
+
+Heading: `BUILT BY US` · Subheading: "Real projects, prototypes and systems we've worked on." White background, Electric Blue accent.
+
+**Use only the seven projects below — do not invent additional projects.** Where screenshots aren't supplied, use clearly labeled mockups tagged **"Project Preview"** (never presented as real screenshots). Show only technologies actually used in each project's final build.
+
+1. **Citizen Portal / CivicEye / Civic Report** — *Civic Technology.* A civic issue reporting platform for citizens to report public problems with photos and location, and track progress. Possible features (show only if implemented): registration/login, issue reporting, photo upload, location tagging, tracking, community impact, profile, admin dashboard. Possible tech: Flutter, Firebase, Node.js, Express, PostgreSQL. Visual: mobile app + admin dashboard.
+
+2. **KVK Farmer Database Management System** — *Agriculture / Government Technology.* A desktop application for Krishi Vigyan Kendra operations to manage farmer and agricultural activity data. Modules: Farmer Management, Visitor Farmers, On-Farm Testing, Front Line Demonstrations, Training Programmes, Vocational Training, Extension Activities, Reports, Analytics, AI/RAG Assistant (where implemented). Tech: Python, PyQt5, PostgreSQL, SQLAlchemy, ReportLab. Status badge: `CAPSTONE / PROJECT`. Visual: government/agriculture data-management dashboard.
+
+3. **RebelSalon** — *Mobile Application.* A salon/barber app concept for presenting services and supporting booking workflows. Tech: Java, XML, Firebase. Features: UI, barber/service info, booking, Firebase database. Visual: Android phone mockup.
+
+4. **Real Estate Website** — *Web Development.* A modern real-estate web experience presenting properties through a responsive, visually focused interface. Features: property presentation/info, responsive design, modern landing experience. Visual: desktop + mobile preview.
+
+5. **Photography Portfolio** — *Web Design.* A modern photography portfolio site focused on visual storytelling and responsive presentation. Visual: large photography-focused mockup.
+
+6. **DataBridge / MoSPI Data Platform** — *Data / API / Analytics.* A concept/project for structured access to statistical datasets and APIs, with processing and analytics capability. Possible areas: data ingestion, REST APIs, structured datasets, processing, visualization, analytics.
+
+7. **SmartVillage / AgriGlide** — *Agriculture / Smart Village / Innovation.* Status badge: `CONCEPT / PROTOTYPE / HACKATHON PROJECT`. A technology concept exploring digital solutions for agriculture and smart-village development. **Do not present as a deployed commercial product.**
+
+---
+
+## 12. PROJECT GRID & CASE STUDY TEMPLATE
+
+**Card (per 2.6):** image, category, project name, one-line description, tech tags, status badge, "View Case Study →". Hover: image zoom, gradient overlay, arrow movement, title shift. Click → `/work/project-name`.
+
+**Case study page structure:** Hero → Overview → Problem → Approach → Solution → Features → Technology → Architecture → Screenshots → Challenges → Outcome → Status → Related Projects → CTA. **Never invent business metrics or performance numbers.**
+
+---
+
+## 13. INDUSTRIES
+
+Heading: `TECHNOLOGY FOR REAL-WORLD PROBLEMS` · Light Surface, Cyan hover accent.
+Small & Growing Businesses · Agriculture · Civic Technology · Education · Healthcare · Real Estate · Retail · Manufacturing · Professional Services · Startups · E-Commerce · Technology.
+Interactive grid — hovering an industry highlights connected technology capabilities.
+
+---
+
+## 14. WHY AUTOSOL
+
+Heading: `WHY BUILD WITH AUTOSOL?` · White, Electric Blue icons. Six cards:
+
+1. **AI-First Thinking** — Use AI where it creates meaningful value.
+2. **Business-First Engineering** — Technology should solve real business problems.
+3. **Connected Systems** — Connect data, software, workflows and people.
+4. **Product Mindset** — We build systems that can evolve.
+5. **Data-Driven** — Use data to understand and improve decisions.
+6. **Long-Term Thinking** — Build foundations that can scale with the business.
+
+No unsupported claims ("99.9% uptime", "500+ clients", etc.).
+
+---
+
+## 15. TRAINING & SKILL DEVELOPMENT
+
+Heading: `LEARN. BUILD. DEPLOY.` · Light Surface, Success Green + Blue accent.
+"Practical technology training focused on building real skills through projects."
+
+**Programs:** AI & GenAI, Agentic AI, Python, Data Science, Machine Learning, LLM Engineering, RAG, Prompt Engineering, AI Automation, Full Stack, Web Dev, Mobile Dev, Cloud, DevOps, Data Analytics, SQL, REST APIs, Git & GitHub, IoT, UI/UX, Digital Marketing.
+**Formats:** Beginner, Intermediate, Advanced, Project-Based, Workshops, Short-Term Programs, Corporate Training, College Programs, Bootcamps, Final-Year Project Mentoring, Hackathon Prep.
+**Model:** `LEARN → PRACTICE → BUILD → DEPLOY → PRESENT → IMPROVE`
+CTA: `EXPLORE TRAINING →`. No guaranteed jobs or fake certifications.
+
+---
+
+## 16. SEO SERVICE PAGE
+
+Hero: `GET FOUND. GET DISCOVERED. GROW ORGANICALLY.`
+Services: Technical SEO, On-Page, Off-Page, Local SEO, Keyword Research, Competitor Research, Content Strategy, SEO Content, Website/Technical Audit, Page Speed, Core Web Vitals, Internal Linking, Schema Markup, Sitemap Optimization, Robots.txt, Search Console, Analytics, Reporting, Monitoring.
+Workflow: `AUDIT → RESEARCH → OPTIMIZE → CREATE → PUBLISH → MEASURE → IMPROVE`. Never guarantee #1 rankings.
+
+---
+
+## 17. DIGITAL PERFORMANCE MARKETING
+
+Heading: `TURN ATTENTION INTO CUSTOMERS.` · Dark Surface, Cyan/Green funnel visual.
+Services: Meta Ads, Google Ads, YouTube Ads, LinkedIn Ads, Lead Generation, Retargeting, Creative Strategy, Social Media, Conversion Optimization, Marketing Automation, Campaign Analytics, ROI/ROAS Tracking.
+Funnel: `REACH → ENGAGEMENT → LEAD → CONVERSION → RETENTION`
+
+---
+
+## 18. FOUNDERS / TEAM
+
+Heading: `THE PEOPLE BEHIND AUTOSOL` · White, Electric Blue card-hover accent.
+
+- **Raviraj** — AI / Agent Engineering Lead
+- **Gaurav** — Data & Intelligence Lead
+- **Sahil** — Software / Product Engineering Lead
+- **Rushikesh** — Growth / Solutions & IoT Lead
+
+**Important:** these are four student founders — do not describe them as experienced executives unless real information supports it. Card (per 2.6): photo placeholder, name, role, short bio, skills, LinkedIn, GitHub, subtle hover motion.
+
+---
+
+## 19. COMPANY STORY
+
+Heading: `WE'RE BUILDING THE TECHNOLOGY LAYER BETWEEN BUSINESS AND POSSIBILITY.`
+AutoSol Technologies is being built around AI, software engineering, automation, data and digital innovation, helping businesses move from `Manual → Digital → Automated → Intelligent`. Use an animated timeline.
+
+---
+
+## 20. FUTURE VISION
+
+Deep Background, full gradient, cinematic scale.
+Heading: `THE FUTURE IS CONNECTED.`
+`AI + SOFTWARE + DATA + AUTOMATION + IoT + BUSINESS` converging into **INTELLIGENT BUSINESS SYSTEMS**.
+Future architecture: `AutoSol AI Core → AutoSol CRM → AutoSol Business OS → Business Intelligence → Automation → IoT → Connected Business Ecosystem`. Label clearly: `VISION` / `IN DEVELOPMENT` / `FUTURE`.
+
+---
+
+## 21. INSIGHTS / BLOG
+
+Light Surface, Electric Blue tags. Categories: AI, Automation, Software, Data, SaaS, Cloud, IoT, Marketing, SEO, Business Technology. Card: cover image, category, title, excerpt, "Read article →". Use editable placeholder articles if none supplied — never invented claims or statistics.
+
+---
+
+## 22. TESTIMONIALS
+
+**Do not invent testimonials.** Show "WHAT OUR CLIENTS SAY" with a clean empty state: "Be one of our first clients." Button: `LEAVE A REVIEW →`. Only admin-approved reviews appear publicly once the site is live.
+
+---
+
+## 23. CONTACT / PROJECT ENQUIRY
+
+Deep Background, full-gradient CTA focus.
+Heading: `HAVE AN IDEA?`
+"Tell us what you're building, what problem you're solving, or what you'd like to automate."
+Form fields: Full Name, Company Name, Email, Phone, Service (AI / Software / Automation / Data / Marketing / IoT), Budget, Timeline, Project Description.
+CTA: `START A CONVERSATION →`
+Email: `autosoltechnologies@gmail.com` — no phone number unless explicitly supplied.
+
+---
+
+## 24. FOOTER
+
+Dark, per component styling in 2.4/2.6.
+Logo + tagline `BUILD. AUTOMATE. GROW.`
+
+- **Company:** About, Team, Work, Insights, Contact
+- **Services:** AI & GenAI, Automation, Software, Web, Mobile, SaaS, Data, Marketing, SEO, IoT, Cloud, UI/UX, Integrations, Consulting
+- **Products:** AutoSol AI Core, AutoSol CRM, AutoSol Business OS
+- **Training:** Training, Programs, Workshops, Project Mentoring
+- **Contact:** autosoltechnologies@gmail.com
+
+Bottom: Privacy Policy · Terms · Cookie Policy · © AutoSol Technologies. All rights reserved.
+
+---
+
+## 25. SITE MAP / PAGES
+
+`/` `/about` `/services` `/services/ai` `/services/automation` `/services/software` `/services/web` `/services/mobile` `/services/saas` `/services/business-systems` `/services/data` `/services/marketing` `/services/seo` `/services/iot` `/services/cloud` `/services/ui-ux` `/services/integrations` `/services/consulting` `/training` `/training/[slug]` `/products` `/solutions` `/industries` `/work` `/work/[slug]` `/team` `/insights` `/insights/[slug]` `/contact` `/review` `/reviews` `/privacy-policy` `/terms` `/cookie-policy`
+
+---
+
+## 26. ADMIN DASHBOARD (content & enquiry management — not a CRM)
+
+Routes: `/admin/login` `/admin` `/admin/enquiries` `/admin/enquiries/[id]` `/admin/reviews` `/admin/projects` `/admin/services` `/admin/training` `/admin/training-enquiries` `/admin/team` `/admin/blog` `/admin/notifications` `/admin/analytics` `/admin/settings`
+
+Sidebar: Dashboard, Enquiries, Reviews, Projects, Services, Training, Training Enquiries, Team, Blog, Notifications, Analytics, Settings, Logout.
+Dashboard widgets: New Enquiries, Pending Reviews, Training Enquiries, Published Projects, Published Services, Recent Activity.
+Notification concepts: `NEW ENQUIRY`, `NEW REVIEW`, `NEW TRAINING ENQUIRY`.
+Enquiry statuses: `NEW → VIEWED → CONTACTED → CLOSED`. Review statuses: `PENDING → APPROVED / REJECTED`.
+Should feel like a clean, modern SaaS admin — reuse the same design tokens (2.1–2.6), just in a denser, utility-first layout.
+
+---
+
+## 27. DATA ARCHITECTURE (Firebase)
+
+Design around: Firebase Authentication, Cloud Firestore, Firebase Storage, Firebase Hosting, Firebase Security Rules (not Supabase; no paid backend required for the initial design).
+Public users can submit contact enquiries, training enquiries, and reviews — but cannot read private enquiries. Only approved reviews are public. Admin manages Projects, Services, Training, Team, Blog, Reviews, Enquiries, Notifications.
+
+---
+
+## 28. RESPONSIVE BEHAVIOR
+
+**Breakpoints:** Mobile 320–430px · Tablet 768–1024px · Desktop 1280–1920px.
+
+- **Mobile:** stack cards to single column, step down the type scale per 2.2's `clamp()` minimums, convert bento/multi-column grids to vertical stacks, touch-friendly 44px+ tap targets, hamburger nav, no accidental horizontal overflow, simplify complex diagrams (e.g., the process flow line becomes vertical), preserve visual hierarchy — mobile should never feel like a shrunk desktop.
+- **Tablet:** 2-column grids where appropriate (8-col grid per 2.3).
+- **Desktop:** full 12-column grid, content capped at 1280–1400px max-width.
+
+---
+
+## 29. ACCESSIBILITY
+
+Strong color contrast (per 2.1 ratios), readable typography, visible keyboard focus states (2px outline per 2.6), accessible buttons/forms with meaningful labels, alt text on all imagery, full reduced-motion support (per 2.7), touch-friendly controls throughout.
+
+---
+
+## 30. CONTENT INTEGRITY RULES
+
+Never fabricate: clients, revenue, users, awards, partners, reviews, certifications, statistics, business results, company history, funding, or investors. Use visible editable placeholders instead (`[PROJECT IMAGE]`, `[FOUNDER PHOTO]`, `[CLIENT REVIEW]`, `[PROJECT LINK]`). Never invent numbers like "500+ clients" or "98% satisfaction" unless real, verified data is supplied later.
+
+---
+
+## 31. LOGO USAGE
+
+Use the official AutoSol Technologies logo as supplied — blue/cyan stylized "A" with an orbital/swoosh element, wordmark, and tagline. Do not redesign it, circle-crop it unnecessarily, or introduce pink/purple into the mark itself. Provide correct-contrast lockups for both light-background and dark-background usage (per the two backgrounds defined in 2.1).
+
+---
+
+## 32. CORE COPY REFERENCE
+
+**Primary hero:**
+```
+BUILD SMARTER.
+AUTOMATE FASTER.
+GROW FURTHER.
+```
+Eyebrow: `AI • SOFTWARE • AUTOMATION • DATA • GROWTH • IoT`
+Description: "We build intelligent software, AI systems and automation solutions that turn complex business problems into connected digital experiences."
+CTAs: `START A PROJECT →` / `EXPLORE OUR WORK`
+
+**Brand statement (use prominently once):** "From ideas to intelligent systems." — "We design, build and connect the technology businesses need to move forward."
+
+**Final CTA section:**
+```
+LET'S BUILD
+WHAT'S NEXT.
+```
+"Have an idea, business problem or process you want to automate? Let's turn it into a practical digital solution."
+Primary: `START A PROJECT →` · Secondary: `EMAIL US` · Email: `autosoltechnologies@gmail.com`
+
+---
+
+## 33. DELIVERABLE INSTRUCTIONS
+
+Build the **complete** website system — not a shallow landing page (hero + 3 cards + about + footer is not acceptable). Every major section above must be present with meaningful, real content.
+
+If delivering via Figma: desktop, tablet and mobile homepage plus all major internal pages; reusable components (Navbar, Footer, Buttons, Service/Project/Product/Founder/Blog/Review Cards, Technology Tags, Form Fields, CTA Sections, Badges, Status Labels, Section Headers, Modal, Mobile Nav) built with Auto Layout, Components & Variants, properly named layers, and the design tokens from Section 2 (colors, typography, spacing, radius, shadows, gradients, motion) as shared styles/variables.
+
+If delivering as code (HTML/React or similar): implement Section 2's tokens as CSS custom properties / a Tailwind theme extension so every component pulls from the same system, rather than one-off hex values per component.
+
+The result must clearly communicate: who we are, what we build, what services we offer, what products we're building, what projects we've developed, what technologies we use, who our founders are, what training we offer, how we work, what industries we serve, and how to contact us — as a real, premium startup website ready for public launch, built on the **"Connected Intelligence"** visual philosophy:
+
+**Business + Data + AI + Automation + Software + Growth = AUTOSOL TECHNOLOGIES**
+**BUILD. AUTOMATE. GROW.**   Ha use kr ani yachya khali he tak 
+
+
+
+============================================================
+34. NON-NEGOTIABLE UI EXECUTION & RESPONSIVE QUALITY RULES
+============================================================
+
+This section has the highest priority for visual execution.
+
+Do not treat this brief as only a content list.
+
+The final result must be a COMPLETE, POLISHED, PROPORTIONALLY BALANCED UI DESIGN.
+
+The website must look intentionally designed at:
+
+320px mobile
+375px mobile
+430px mobile
+768px tablet
+1024px tablet
+1280px desktop
+1440px desktop
+1920px wide desktop
+
+------------------------------------------------------------
+34.1 NO EMPTY / DEAD SPACES
+------------------------------------------------------------
+
+DO NOT create large unexplained empty areas.
+
+Every section must use its available viewport space intentionally.
+
+Avoid:
+
+- huge blank areas
+- excessive top/bottom padding
+- content floating in the middle with unused space
+- oversized margins
+- sections that feel unfinished
+- isolated cards surrounded by unnecessary whitespace
+- hero sections where the content occupies only a small portion of the screen
+- desktop layouts where the right half is completely empty
+- mobile sections with excessive vertical gaps
+
+Whitespace is allowed and encouraged when it improves hierarchy.
+
+However:
+
+"premium whitespace" does NOT mean empty unused space.
+
+Maintain visual balance.
+
+If a section has a two-column layout:
+
+LEFT CONTENT
++
+RIGHT VISUAL
+
+both columns should contribute meaningful visual weight.
+
+Do not leave an empty right column.
+
+If there is no real image available:
+
+use a clearly labelled visual mockup,
+system diagram,
+UI preview,
+architecture visualization,
+abstract data visualization,
+or project placeholder.
+
+Never leave the column blank.
+
+------------------------------------------------------------
+34.2 DESKTOP VIEWPORT FIT
+------------------------------------------------------------
+
+The desktop homepage must be designed to properly occupy the first viewport.
+
+At 1440 × 900:
+
+The hero should feel complete within the viewport.
+
+Recommended visual structure:
+
+------------------------------------------------
+NAVIGATION
+------------------------------------------------
+
+        HERO CONTENT
+                         PRODUCT / AI VISUAL
+
+        CTA
+
+        SUPPORTING TECHNOLOGY STRIP
+
+------------------------------------------------
+
+Do not make the hero unnecessarily tall.
+
+Do not force users to see a large empty area before reaching the next section.
+
+The hero should create a strong visual first impression immediately.
+
+Use the 12-column grid properly.
+
+Example:
+
+2 columns → left spacing
+6 columns → hero content
+4 columns → visual
+
+or
+
+6 columns → content
+6 columns → visual
+
+depending on the composition.
+
+------------------------------------------------------------
+34.3 MOBILE VIEWPORT FIT
+------------------------------------------------------------
+
+Mobile design must NOT simply be a scaled-down desktop version.
+
+Create a genuinely responsive mobile composition.
+
+At:
+
+320px
+375px
+430px
+
+ensure:
+
+- no horizontal overflow
+- no clipped text
+- no overlapping elements
+- no oversized headings
+- no tiny buttons
+- no inaccessible navigation
+- no excessive vertical gaps
+- no empty visual areas
+- no desktop-only visual forcing the layout
+- no unreadable diagrams
+- no cards becoming unnecessarily tall
+
+Minimum interactive target:
+
+44 × 44px.
+
+Buttons should generally become:
+
+width: fit-content
+
+or
+
+full-width where appropriate.
+
+Forms should become one-column layouts.
+
+Bento grids should collapse intelligently.
+
+Complex diagrams should simplify rather than shrink.
+
+------------------------------------------------------------
+34.4 MOBILE HERO
+------------------------------------------------------------
+
+The mobile hero is extremely important.
+
+Do NOT simply stack every desktop element vertically.
+
+Use this order:
+
+1. Navigation
+2. Eyebrow
+3. Main headline
+4. Supporting copy
+5. Primary CTA
+6. Secondary CTA
+7. Compact AI/system visual
+8. Technology capability strip
+
+The hero visual must remain visible.
+
+However, it should be simplified for mobile.
+
+Do not allow the visual to create a massive blank area.
+
+Recommended mobile hero visual:
+
+Compact connected-system visualization showing:
+
+DATA
+ ↓
+AI
+ ↓
+AUTOMATION
+ ↓
+SOFTWARE
+
+Use animated nodes and lines.
+
+------------------------------------------------------------
+34.5 SECTION HEIGHT
+------------------------------------------------------------
+
+Do not force every section to use:
+
+min-height: 100vh
+
+Only use viewport-height compositions where they genuinely improve the experience.
+
+Recommended approach:
+
+Hero:
+approximately 85–100vh desktop.
+
+Major feature sections:
+content-driven height.
+
+Product showcase:
+content-driven.
+
+Project sections:
+content-driven.
+
+Contact:
+content-driven.
+
+This prevents artificial empty space.
+
+------------------------------------------------------------
+34.6 SECTION PADDING
+------------------------------------------------------------
+
+Use the defined spacing system intelligently.
+
+Desktop:
+
+96–160px vertical spacing depending on importance.
+
+Tablet:
+
+72–112px.
+
+Mobile:
+
+48–80px.
+
+Do NOT automatically apply 160px padding to every section.
+
+Reduce spacing when content is already visually dense.
+
+Increase spacing when two visually important sections need separation.
+
+The final design should feel rhythmical:
+
+DARK
+↓
+LIGHT
+↓
+LIGHT
+↓
+DARK
+↓
+DARK
+↓
+LIGHT
+
+rather than every section looking identical.
+
+------------------------------------------------------------
+34.7 CONTENT DENSITY
+------------------------------------------------------------
+
+Every viewport should have a healthy visual information density.
+
+Aim for:
+
+60% visual/neutral area
+30% typography/structure
+10% accent
+
+as specified in the design system.
+
+Do not interpret this as permission to leave 60% of the screen empty.
+
+Neutral background counts as visual composition only when it supports hierarchy.
+
+Use:
+
+- typography
+- diagrams
+- product UI
+- cards
+- grids
+- lines
+- imagery
+- visual anchors
+
+to create intentional composition.
+
+------------------------------------------------------------
+34.8 VISUAL ANCHOR RULE
+------------------------------------------------------------
+
+Every major section must have at least one strong visual anchor.
+
+Examples:
+
+Hero:
+AI connected-system visualization
+
+Services:
+Bento service grid
+
+Process:
+Animated workflow line
+
+Technology:
+Technology constellation
+
+Products:
+Product dashboard / architecture
+
+Projects:
+Project screenshots / mockups
+
+Industries:
+Interactive industry system
+
+Training:
+Learning journey
+
+Marketing:
+Growth funnel
+
+Founders:
+Founder profiles
+
+Future Vision:
+Connected ecosystem diagram
+
+Contact:
+Interactive enquiry form / abstract AI system
+
+Never create a section that contains only:
+
+heading
+paragraph
+empty space
+
+unless it is intentionally designed as a short editorial statement section.
+
+------------------------------------------------------------
+34.9 CARD DENSITY
+------------------------------------------------------------
+
+Do not create hundreds of identical cards.
+
+Cards should have hierarchy.
+
+Use:
+
+large feature cards
+medium cards
+small supporting cards
+
+Example service layout:
+
+-----------------------------------------
+| LARGE AI & GENAI     | AUTOMATION    |
+|                      |               |
+-----------------------------------------
+| SOFTWARE             | WEB           |
+-----------------------------------------
+| MOBILE | DATA | SaaS | BUSINESS SYS  |
+-----------------------------------------
+
+Do not make every card the same size if the content hierarchy does not require it.
+
+------------------------------------------------------------
+34.10 HERO VISUAL QUALITY
+------------------------------------------------------------
+
+The hero visual should NOT look like a generic dashboard screenshot.
+
+Create an original AutoSol "Connected Intelligence" visualization.
+
+Show:
+
+Business Data
+      ↓
+AI Core
+      ↓
+Automation
+      ↓
+Software
+      ↓
+Analytics
+      ↓
+Business Outcome
+
+Use:
+
+nodes
+lines
+data particles
+small UI panels
+metrics only where conceptual
+API connections
+workflow arrows
+subtle glow
+
+Do not use fake company data.
+
+If numbers appear in the visual, label them as conceptual UI data or use non-numeric visual indicators.
+
+------------------------------------------------------------
+34.11 PROJECT VISUALS
+------------------------------------------------------------
+
+Projects must visually feel different from one another.
+
+Do NOT reuse one generic dashboard for every project.
+
+Citizen Portal:
+mobile civic reporting + admin dashboard
+
+KVK:
+agriculture/government desktop application
+
+RebelSalon:
+mobile booking application
+
+Real Estate:
+property website
+
+Photography:
+image-heavy portfolio
+
+DataBridge:
+data/API/analytics interface
+
+SmartVillage:
+agriculture/smart-village concept visualization
+
+Each project should have its own visual identity while remaining inside the AutoSol design system.
+
+------------------------------------------------------------
+34.12 PRODUCT VISUALS
+------------------------------------------------------------
+
+Products must look like real product concepts.
+
+AutoSol AI Core:
+
+AI architecture / intelligence layer
+
+AutoSol CRM:
+
+CRM dashboard
+
+AutoSol Business OS:
+
+business operating system dashboard
+
+Do not show all three products using the exact same dashboard.
+
+Each should have a distinct interface.
+
+------------------------------------------------------------
+34.13 RESPONSIVE COMPONENT BEHAVIOR
+------------------------------------------------------------
+
+Define responsive variants for:
+
+Navbar
+Hero
+Buttons
+Service Cards
+Project Cards
+Product Cards
+Technology Cards
+Founder Cards
+Blog Cards
+Forms
+CTA
+Footer
+Architecture diagrams
+Process timeline
+
+Desktop:
+multi-column
+
+Tablet:
+2-column where appropriate
+
+Mobile:
+1-column
+
+But do not mechanically convert every grid to 1 column.
+
+Some elements may remain horizontally scrollable when intentional.
+
+For example:
+
+technology tags
+product feature chips
+project category filters
+
+------------------------------------------------------------
+34.14 TYPOGRAPHY RESPONSIVENESS
+------------------------------------------------------------
+
+Headlines must resize fluidly.
+
+Never allow:
+
+headline overflow
+awkward word wrapping
+single orphan words
+text touching screen edges
+CTA overlapping text
+
+For mobile:
+
+Main hero headline should generally occupy approximately 2–4 lines depending on viewport.
+
+Use controlled line breaks only where they improve composition.
+
+------------------------------------------------------------
+34.15 IMAGE / MOCKUP RESPONSIVENESS
+------------------------------------------------------------
+
+Images and UI mockups must preserve their aspect ratio.
+
+Desktop:
+
+large visual
+
+Tablet:
+
+medium visual
+
+Mobile:
+
+compact visual
+
+Never:
+
+crop important UI content
+stretch images
+leave huge blank containers
+use giant images that push content unnecessarily far down
+
+------------------------------------------------------------
+34.16 NAVIGATION RESPONSIVENESS
+------------------------------------------------------------
+
+Desktop:
+
+Logo
+Home
+Services
+Solutions
+Products
+Work
+Training
+Insights
+Contact
+CTA
+
+Tablet:
+
+reduce navigation intelligently.
+
+Mobile:
+
+Logo
+Menu
+
+Mobile menu should be a polished full-width/drop-down panel.
+
+Use smooth 300–400ms transition.
+
+------------------------------------------------------------
+34.17 SCROLL EXPERIENCE
+------------------------------------------------------------
+
+The entire page should feel like one continuous story.
+
+Avoid abrupt:
+
+section → huge blank gap → section
+
+Instead use:
+
+section
+↓
+visual transition
+↓
+next section
+
+Use:
+
+gradient fades
+thin divider lines
+overlapping visual elements
+subtle background transitions
+animated data paths
+
+where appropriate.
+
+------------------------------------------------------------
+34.18 DARK / LIGHT BALANCE
+------------------------------------------------------------
+
+Follow the exact section color map already defined.
+
+Do not randomly change section backgrounds.
+
+Dark sections should feel technical and immersive.
+
+Light sections should feel clean and information-focused.
+
+The transition should feel deliberate.
+
+Dark:
+Hero
+Technology
+Products
+Product Philosophy
+Future Vision
+Contact
+
+Light:
+Services
+Process
+Projects
+Industries
+Why AutoSol
+Training
+Founders
+Insights
+
+------------------------------------------------------------
+34.19 DESKTOP WIDTH UTILIZATION
+------------------------------------------------------------
+
+At 1440px and 1920px wide:
+
+Do not simply center a narrow 800px website.
+
+Use the available width intelligently.
+
+Maximum content width:
+
+1280–1400px.
+
+Use:
+
+12-column grid
+large visuals
+balanced text columns
+large product mockups
+wide project imagery
+
+At 1920px:
+
+maintain readable max-width.
+
+Do not stretch text across the entire screen.
+
+------------------------------------------------------------
+34.20 MOBILE WIDTH UTILIZATION
+------------------------------------------------------------
+
+At 320–430px:
+
+Use the full available width intelligently.
+
+Recommended horizontal padding:
+
+16–20px.
+
+Cards should not become tiny.
+
+Typography should remain readable.
+
+Do not create:
+
+card width 250px
+with huge 80px margins
+
+when the viewport is 375px.
+
+Use approximately:
+
+viewport width
+minus 32–40px
+
+for primary content.
+
+------------------------------------------------------------
+34.21 NO PLACEHOLDER UI GAPS
+------------------------------------------------------------
+
+If content is missing:
+
+show an intentional placeholder.
+
+Examples:
+
+[PROJECT IMAGE]
+[FOUNDER PHOTO]
+[CLIENT REVIEW]
+
+Style placeholders professionally.
+
+Never leave:
+
+empty white card
+empty image box
+empty right column
+empty dashboard frame
+empty hero area
+
+without explaining what belongs there.
+
+------------------------------------------------------------
+34.22 PAGE COMPLETENESS
+------------------------------------------------------------
+
+Every page listed in the sitemap must have an actual UI design.
+
+Do NOT only design the homepage and assume internal pages.
+
+At minimum, create visual templates for:
+
+Service detail page
+Product detail page
+Project case study
+Training detail
+Blog article
+About
+Team
+Industries
+Contact
+Reviews
+
+These pages must inherit the global design system.
+
+------------------------------------------------------------
+34.23 INTERNAL PAGE HEROES
+------------------------------------------------------------
+
+Every internal page should have a compact but visually strong hero.
+
+Example:
+
+AI SERVICE
+
+AI & GENAI
+Build intelligent systems around your business.
+
+[visual]
+
+Services:
+LLM
+RAG
+Agents
+Automation
+
+Do not repeat the exact homepage hero on every page.
+
+Each page needs its own visual identity.
+
+------------------------------------------------------------
+34.24 VISUAL HIERARCHY
+------------------------------------------------------------
+
+Every viewport must have:
+
+1 primary focal point
+2–3 secondary visual elements
+supporting text
+clear CTA where appropriate
+
+Do not make everything equally prominent.
+
+Use:
+
+size
+contrast
+position
+color
+spacing
+motion
+
+to establish hierarchy.
+
+------------------------------------------------------------
+34.25 DESIGN QA BEFORE FINALIZING
+------------------------------------------------------------
+
+Before considering the Figma design complete, visually inspect every page at:
+
+320 × 800
+375 × 812
+430 × 932
+768 × 1024
+1024 × 768
+1280 × 800
+1440 × 900
+1920 × 1080
+
+Check:
+
+✓ No horizontal scrolling
+✓ No clipped text
+✓ No overlapping elements
+✓ No excessive empty space
+✓ No giant unexplained gaps
+✓ No empty right/left columns
+✓ No stretched images
+✓ No tiny unreadable text
+✓ Buttons remain accessible
+✓ Navigation works visually
+✓ Cards align properly
+✓ Section spacing is consistent
+✓ Dark/light rhythm is preserved
+✓ Hero feels complete
+✓ Mobile feels intentionally designed
+✓ Tablet does not look broken
+✓ Desktop uses available width
+✓ Typography remains balanced
+✓ Visual hierarchy is clear
+✓ CTAs are obvious
+✓ Forms are usable
+✓ Footer is complete
+
+If any section fails these checks, redesign that section before final delivery.
+
+------------------------------------------------------------
+34.26 MOST IMPORTANT RULE
+------------------------------------------------------------
+
+DO NOT OPTIMIZE FOR "FILLING SPACE".
+
+Optimize for:
+
+BALANCE.
+
+The website should never look empty.
+
+But it should also never look overcrowded.
+
+Every pixel should feel intentional.
+
+The final result should look like a professionally art-directed technology startup website — not an AI-generated collection of cards.
+
+The design must feel:
+
+CONNECTED
+BALANCED
+PREMIUM
+TECHNICAL
+MODERN
+HUMAN
+PRODUCT-FOCUSED
+RESPONSIVE
+
+AutoSol Technologies should look like a real technology company preparing for public launch.  i have shared the compnay logo also 
