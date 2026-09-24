@@ -120,9 +120,9 @@ export default function Layout() {
           <div className="footer-bottom-inner">
             <span className="footer-copyright">© {new Date().getFullYear()} AutoSol Technologies. All rights reserved.</span>
             <div className="footer-policy-links">
-              <Link to="/privacy-policy">Privacy Policy</Link>
+              <span className="footer-policy-link">Privacy Policy</span>
               <span>|</span>
-              <Link to="/terms-and-conditions">Terms &amp; Conditions</Link>
+              <span className="footer-policy-link">Terms &amp; Conditions</span>
             </div>
           </div>
         </div>
