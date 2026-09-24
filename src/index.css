@@ -2066,6 +2066,14 @@ footer {
   font-size: 9px;
 }
 
+.footer-copyright {
+  display: block;
+  color: #dfeaf8;
+  font-size: 15px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
 .footer-bottom-ig {
   display: inline-flex;
   align-items: center;
