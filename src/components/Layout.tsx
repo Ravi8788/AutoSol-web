@@ -119,10 +119,6 @@ export default function Layout() {
         <div className="container footer-bottom">
           <div style={{ display: "flex", flexDirection: "column", gap: "6px" }}>
             <span className="footer-copyright">© {new Date().getFullYear()} AutoSol Technologies. All rights reserved.</span>
-            <span style={{ display: "inline-block" }}>
-              <a href="tel:+918668686934" style={{ color: "inherit", lineHeight: 1.2, whiteSpace: "nowrap" }}>+91 86686 86934</a>
-            </span>
-            <span style={{ color: "inherit", lineHeight: 1.2 }}>Kolhapur, Maharashtra</span>
           </div>
         </div>
       </footer>
