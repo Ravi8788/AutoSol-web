@@ -6,6 +6,26 @@
   NODE_VERSION = "20"
 
 [[redirects]]
+  from = "/logo-brand.jpeg"
+  to = "/logo-brand.jpeg"
+  status = 200
+
+[[redirects]]
+  from = "/favicon.svg"
+  to = "/favicon.svg"
+  status = 200
+
+[[redirects]]
+  from = "/og-image.svg"
+  to = "/og-image.svg"
+  status = 200
+
+[[redirects]]
+  from = "/assets/*"
+  to = "/assets/:splat"
+  status = 200
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200

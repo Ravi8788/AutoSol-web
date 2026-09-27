@@ -1,1 +1,5 @@
+/logo-brand.jpeg /logo-brand.jpeg 200
+/favicon.svg /favicon.svg 200
+/og-image.svg /og-image.svg 200
+/assets/* /assets/:splat 200
 /* /index.html 200
