@@ -16,7 +16,15 @@ function Brand({ footer = false }: { footer?: boolean }) {
       aria-label="AutoSol Technologies home"
     >
       <span className="brand-image">
-        <img src={logo} alt="" />
+        <img
+          src={logo}
+          alt="AutoSol Technologies logo"
+          loading="eager"
+          decoding="async"
+          fetchPriority="high"
+          width={48}
+          height={48}
+        />
       </span>
       <span className="brand-type">
         <strong>Auto<span>Sol</span></strong>
