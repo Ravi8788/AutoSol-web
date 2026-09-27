@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { NavLink, Link, Outlet } from "react-router";
-import logo from "@/imports/logo_attachment2.jpeg";
 import ScrollToTop from "./ScrollToTop";
 import WhatsAppButton from "./WhatsAppButton";
 
@@ -17,7 +16,7 @@ function Brand({ footer = false }: { footer?: boolean }) {
     >
       <span className="brand-image">
         <img
-          src={logo}
+          src="/logo-brand.jpeg"
           alt="AutoSol Technologies logo"
           loading="eager"
           decoding="async"
