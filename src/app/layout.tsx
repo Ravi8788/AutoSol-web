@@ -114,7 +114,7 @@ const organizationJsonLd = {
       "@id": `${SITE_URL}/#organization`,
       name: SITE_NAME,
       url: SITE_URL,
-      logo: `${SITE_URL}/logo-mark.svg`,
+      logo: `${SITE_URL}/logo-full.png`,
       image: `${SITE_URL}/og-image.png`,
       description: SITE_DESCRIPTION,
       email: "autosoltechnologies@gmail.com",

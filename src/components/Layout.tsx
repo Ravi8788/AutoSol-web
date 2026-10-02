@@ -38,19 +38,13 @@ function Brand({ footer = false }: { footer?: boolean }) {
       className={`brand ${footer ? "brand--footer" : ""}`}
       aria-label="AutoSol Technologies home"
     >
-      <span className="brand-image">
-        {/* SVG avoids Git LFS pointer issues on Vercel for raster logos */}
-        <img
-          src="/logo-mark.svg"
-          alt="AutoSol Technologies logo"
-          width={48}
-          height={48}
-        />
-      </span>
-      <span className="brand-type">
-        <strong>Auto<span>Sol</span></strong>
-        <small>TECHNOLOGIES</small>
-      </span>
+      <img
+        className="brand-logo"
+        src="/logo-full.png"
+        alt="AutoSol Technologies — Build. Automate. Grow."
+        width={256}
+        height={102}
+      />
     </Link>
   );
 }

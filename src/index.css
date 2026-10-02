@@ -96,8 +96,17 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
   display: inline-flex;
   align-items: center;
   flex: 0 0 auto;
-  gap: 10px;
+  gap: 0;
   color: white;
+}
+
+.brand-logo {
+  display: block;
+  width: auto;
+  height: 46px;
+  max-width: min(240px, 52vw);
+  object-fit: contain;
+  object-position: left center;
 }
 
 .brand-image {
@@ -1983,7 +1992,12 @@ footer {
   margin-bottom: 18px;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 0;
+}
+
+.brand--footer .brand-logo {
+  height: 58px;
+  max-width: min(280px, 70vw);
 }
 
 .brand--footer .brand-image {
@@ -2246,6 +2260,7 @@ footer {
   }
   .section { padding: 68px 0; }
   .nav-wrap { min-height: 70px; }
+  .brand-logo { height: 40px; max-width: min(200px, 58vw); }
   .brand-image { width: 39px; height: 39px; }
   .brand-type strong { font-size: 19px; }
   .brand-type small { font-size: 6px; }
@@ -5957,7 +5972,11 @@ footer {
 }
 
 .brand-image img {
-  object-fit: cover;
+  object-fit: contain;
+}
+
+.brand-logo {
+  filter: none;
 }
 
 body.nav-open {
