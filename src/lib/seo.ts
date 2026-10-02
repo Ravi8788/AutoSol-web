@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 
-export const SITE_URL = "https://autosol-web.netlify.app";
+export const SITE_URL = "https://www.autosoltechnologies.com";
 export const SITE_NAME = "AutoSol Technologies";
 export const SITE_DESCRIPTION =
   "AutoSol Technologies delivers AI solutions, automation systems, CRM, ERP, web development, mobile app development, and digital transformation services for growing businesses in India.";
 
 const OG_IMAGE = {
-  url: "/og-image.svg",
+  url: "/og-image.png",
   width: 1200,
   height: 630,
   alt: "AutoSol Technologies technology and automation solutions",

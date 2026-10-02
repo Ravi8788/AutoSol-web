@@ -13,13 +13,33 @@
   status = 200
 
 [[redirects]]
+  from = "/logo-mark.png"
+  to = "/logo-mark.png"
+  status = 200
+
+[[redirects]]
+  from = "/favicon.ico"
+  to = "/favicon.ico"
+  status = 200
+
+[[redirects]]
   from = "/favicon.svg"
   to = "/favicon.svg"
   status = 200
 
 [[redirects]]
-  from = "/og-image.svg"
-  to = "/og-image.svg"
+  from = "/apple-touch-icon.png"
+  to = "/apple-touch-icon.png"
+  status = 200
+
+[[redirects]]
+  from = "/og-image.png"
+  to = "/og-image.png"
+  status = 200
+
+[[redirects]]
+  from = "/site.webmanifest"
+  to = "/site.webmanifest"
   status = 200
 
 [[redirects]]

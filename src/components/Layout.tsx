@@ -41,7 +41,7 @@ function Brand({ footer = false }: { footer?: boolean }) {
     >
       <span className="brand-image">
         <Image
-          src="/logo-brand.jpeg"
+          src="/logo-mark.png"
           alt="AutoSol Technologies logo"
           priority
           width={48}
@@ -57,6 +57,7 @@ function Brand({ footer = false }: { footer?: boolean }) {
 }
 
 export default function Layout({ children }: { children: ReactNode }) {
+  const pathname = usePathname() ?? "";
   const [menuOpen, setMenuOpen] = useState(false);
   const headerRef = useRef<HTMLElement>(null);
   const closeMenu = () => setMenuOpen(false);
@@ -69,6 +70,15 @@ export default function Layout({ children }: { children: ReactNode }) {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    document.body.classList.toggle("nav-open", menuOpen);
+    return () => document.body.classList.remove("nav-open");
+  }, [menuOpen]);
+
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [pathname]);
 
   return (
     <main>
