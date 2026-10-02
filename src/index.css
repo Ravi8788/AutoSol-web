@@ -4972,7 +4972,7 @@ footer {
   grid-area: stage;
   display: block;
   width: 100%;
-  max-width: 260px;
+  max-width: 420px;
   margin-inline: auto;
 }
 
@@ -4980,14 +4980,14 @@ footer {
   position: relative;
   width: 100%;
   min-height: 0;
-  padding: 8px;
+  padding: 12px;
   border: 1px solid rgba(58, 160, 255, 0.2);
-  border-radius: 16px;
+  border-radius: 20px;
   background:
     radial-gradient(circle at 50% 48%, rgba(0, 87, 230, 0.28), transparent 42%),
     linear-gradient(165deg, #07101f 0%, #0a1628 48%, #06101c 100%);
   box-shadow:
-    0 14px 32px rgba(8, 28, 68, 0.14),
+    0 18px 42px rgba(8, 28, 68, 0.16),
     inset 0 1px 0 rgba(255, 255, 255, 0.06);
   overflow: hidden;
   color: #d7e6f7;
@@ -5013,7 +5013,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -5044,9 +5044,9 @@ footer {
   position: relative;
   z-index: 1;
   width: 100%;
-  aspect-ratio: 1 / 1;
-  max-height: 170px;
-  margin: 2px 0 4px;
+  aspect-ratio: 1.32 / 1;
+  max-height: none;
+  margin: 4px 0 6px;
 }
 
 .fx-core-ring {
@@ -5092,8 +5092,8 @@ footer {
   position: absolute;
   inset: 50%;
   z-index: 3;
-  width: min(42%, 90px);
-  height: min(42%, 90px);
+  width: min(40%, 118px);
+  height: min(40%, 118px);
   translate: -50% -50%;
   display: grid;
   place-content: center;
@@ -5104,22 +5104,22 @@ footer {
     radial-gradient(circle at 50% 50%, #0b1b33 0%, #07101f 70%);
   border: 1px solid rgba(126, 200, 255, 0.45);
   box-shadow:
-    0 0 0 5px rgba(0, 87, 230, 0.12),
-    0 0 28px rgba(0, 120, 255, 0.45);
+    0 0 0 6px rgba(0, 87, 230, 0.12),
+    0 0 36px rgba(0, 120, 255, 0.45);
 }
 
 .fx-core-hub small {
   color: #7ec8ff;
-  font-size: 8px;
+  font-size: 9px;
   font-weight: 800;
   letter-spacing: 0.18em;
 }
 
 .fx-core-hub strong {
-  margin-top: 2px;
+  margin-top: 3px;
   color: #fff;
   font-family: var(--font-inter-tight), var(--font-manrope), sans-serif;
-  font-size: clamp(0.72rem, 1.5vw, 0.95rem);
+  font-size: clamp(0.85rem, 1.6vw, 1.1rem);
   font-weight: 700;
   letter-spacing: -0.03em;
   line-height: 1;
@@ -5128,7 +5128,7 @@ footer {
 .fx-core-hub em {
   margin-top: 4px;
   color: rgba(158, 200, 255, 0.7);
-  font-size: 7px;
+  font-size: 8px;
   font-style: normal;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -5180,33 +5180,33 @@ footer {
   z-index: 4;
   display: inline-flex;
   align-items: center;
-  gap: 5px;
+  gap: 6px;
   max-width: 48%;
-  padding: 5px 7px;
+  padding: 7px 9px;
   border: 1px solid rgba(58, 160, 255, 0.22);
-  border-radius: 8px;
+  border-radius: 10px;
   background: rgba(8, 18, 34, 0.88);
   color: #e8f3ff;
-  font-size: 7px;
+  font-size: 8px;
   font-weight: 800;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   backdrop-filter: blur(8px);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
   animation: fx-float 5.5s ease-in-out infinite;
 }
 
 .fx-sat-icon {
   display: grid;
   place-items: center;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   color: #3aa0ff;
   flex: none;
 }
 
 .fx-sat-icon svg {
-  width: 13px;
-  height: 13px;
+  width: 14px;
+  height: 14px;
 }
 
 .fx-sat--tl { top: 10%; left: 2%; animation-delay: 0s; }
@@ -5373,14 +5373,14 @@ footer {
 
   .fx-inner {
     display: grid;
-    grid-template-columns: minmax(280px, 1.2fr) minmax(220px, 0.62fr);
+    grid-template-columns: minmax(280px, 1.05fr) minmax(320px, 0.95fr);
     grid-template-areas:
       "lead stage"
       "actions stage";
     align-items: center;
-    column-gap: clamp(10px, 1.8vw, 24px);
-    row-gap: 14px;
-    width: min(1080px, 100%);
+    column-gap: clamp(18px, 2.4vw, 40px);
+    row-gap: 16px;
+    width: min(1280px, 100%);
   }
 
   .fx-lead {
@@ -5396,19 +5396,20 @@ footer {
   .fx-stage {
     display: block;
     width: 100%;
-    max-width: 270px;
-    margin-inline: 0 0;
-    justify-self: end;
+    max-width: none;
+    margin-inline: 0;
+    justify-self: stretch;
     align-self: center;
     z-index: 1;
   }
 
   .fx-core-panel {
-    padding: 8px;
+    padding: 14px;
   }
 
   .fx-core-map {
-    max-height: 180px;
+    max-height: none;
+    aspect-ratio: 1.3 / 1;
   }
 
   .fx-stats {
@@ -5418,17 +5419,18 @@ footer {
 
 @media (min-width: 1200px) {
   .fx-inner {
-    grid-template-columns: minmax(380px, 1.25fr) minmax(240px, 0.58fr);
-    column-gap: clamp(14px, 1.8vw, 28px);
-    width: min(1140px, 100%);
+    grid-template-columns: minmax(400px, 1.05fr) minmax(380px, 0.95fr);
+    column-gap: clamp(24px, 2.6vw, 48px);
+    width: min(1320px, 100%);
   }
 
   .fx-stage {
-    max-width: 280px;
+    max-width: none;
   }
 
   .fx-core-map {
-    max-height: 190px;
+    max-height: none;
+    aspect-ratio: 1.32 / 1;
   }
 }
 
@@ -5445,7 +5447,7 @@ footer {
       "lead"
       "stage"
       "actions";
-    gap: 12px;
+    gap: 16px;
   }
 
   .fx-note {
@@ -5455,48 +5457,49 @@ footer {
   .fx-stage {
     display: block !important;
     visibility: visible;
-    max-width: 220px;
     width: 100%;
+    max-width: 100%;
   }
 
   .fx-core-map {
-    max-height: 150px;
+    max-height: none;
+    aspect-ratio: 1.36 / 1;
   }
 
   .fx-sat {
-    font-size: 6px;
-    padding: 4px 5px;
-    letter-spacing: 0.03em;
+    font-size: 7.5px;
+    padding: 6px 8px;
+    letter-spacing: 0.04em;
     max-width: 46%;
   }
 
   .fx-sat-icon {
-    width: 14px;
-    height: 14px;
+    width: 18px;
+    height: 18px;
   }
 
   .fx-sat-icon svg {
-    width: 10px;
-    height: 10px;
+    width: 12px;
+    height: 12px;
   }
 
   .fx-core-hub {
-    width: min(46%, 78px);
-    height: min(46%, 78px);
+    width: min(40%, 112px);
+    height: min(40%, 112px);
   }
 
   .fx-core-hub strong {
-    font-size: 0.7rem;
+    font-size: 0.95rem;
   }
 
   .fx-core-hub small,
   .fx-core-hub em {
-    font-size: 6px;
+    font-size: 7.5px;
   }
 
   .fx-core-top,
   .fx-core-bottom {
-    font-size: 8px;
+    font-size: 9px;
   }
 }
 
@@ -5513,8 +5516,8 @@ footer {
   .fx-stat { flex: 1 1 140px; width: auto; }
   .fx-watermark { display: none; }
   .fx-go { width: auto; }
-  .fx-stage { max-width: 200px; }
-  .fx-core-map { max-height: 136px; }
+  .fx-stage { max-width: 100%; }
+  .fx-core-map { max-height: none; aspect-ratio: 1.4 / 1; }
 }
 
 @media (prefers-reduced-motion: reduce) {
