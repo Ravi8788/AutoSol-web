@@ -40,7 +40,7 @@ function Brand({ footer = false }: { footer?: boolean }) {
     >
       <img
         className="brand-logo"
-        src="/logo-full.png"
+        src="/logo-full.jpg"
         alt="AutoSol Technologies — Build. Automate. Grow."
         width={256}
         height={102}
