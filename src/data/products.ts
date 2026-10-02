@@ -26,7 +26,7 @@ export const products: Product[] = [
     shortDesc: "A reusable AI infrastructure layer for language models, retrieval, agents, workflows and business context.",
     longDesc: "AutoSol AI Core is being designed as a reusable intelligence layer for powering AI-enabled applications, business workflows and future AutoSol products. Instead of rebuilding AI capabilities separately inside every application, AI Core is intended to provide a shared foundation for language models, business context, retrieval, agents, tools, workflows and evaluation.",
     chips: ["LLM Integration", "RAG", "Vector Search", "AI Agents", "Tool Calling", "Embeddings"],
-    color: "#0052e8",
+    color: "#0057e6",
   },
   {
     slug: "crm",
@@ -38,7 +38,7 @@ export const products: Product[] = [
     shortDesc: "A connected CRM designed for businesses managing leads through WhatsApp, spreadsheets and manual processes.",
     longDesc: "AutoSol CRM is being designed for small and growing businesses that manage leads and customer relationships across WhatsApp, spreadsheets, phone calls and manual processes. The goal is to bring customer information, sales activity, follow-ups, communication, AI assistance and business workflows into one connected environment.",
     chips: ["Leads", "Pipeline", "Follow-Ups", "AI Assistant", "Automation", "Analytics"],
-    color: "#00aadd",
+    color: "#0090d4",
   },
   {
     slug: "business-os",

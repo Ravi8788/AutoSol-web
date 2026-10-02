@@ -1,6 +1,8 @@
 [build]
-  command = "pnpm run build"
-  publish = "dist"
+  command = "npm run build"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
 
 [build.environment]
   NODE_VERSION = "20"
@@ -23,9 +25,4 @@
 [[redirects]]
   from = "/assets/*"
   to = "/assets/:splat"
-  status = 200
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
   status = 200

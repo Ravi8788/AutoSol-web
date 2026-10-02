@@ -1,26 +1,49 @@
-import { useState } from "react";
-import { NavLink, Link, Outlet } from "react-router";
+"use client";
+
+import { useEffect, useRef, useState, type ReactNode } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import ScrollToTop from "./ScrollToTop";
 import WhatsAppButton from "./WhatsAppButton";
+import Motion from "./Motion";
 
 function Arrow() {
   return <span className="arrow" aria-hidden="true">→</span>;
 }
 
+function NavItem({
+  href,
+  end = false,
+  onClick,
+  children,
+}: {
+  href: string;
+  end?: boolean;
+  onClick?: () => void;
+  children: ReactNode;
+}) {
+  const pathname = usePathname() ?? "";
+  const active = end ? pathname === href : pathname === href || pathname.startsWith(`${href}/`);
+  return (
+    <Link href={href} className={active ? "active" : undefined} onClick={onClick}>
+      {children}
+    </Link>
+  );
+}
+
 function Brand({ footer = false }: { footer?: boolean }) {
   return (
     <Link
-      to="/"
+      href="/"
       className={`brand ${footer ? "brand--footer" : ""}`}
       aria-label="AutoSol Technologies home"
     >
       <span className="brand-image">
-        <img
+        <Image
           src="/logo-brand.jpeg"
           alt="AutoSol Technologies logo"
-          loading="eager"
-          decoding="async"
-          fetchPriority="high"
+          priority
           width={48}
           height={48}
         />
@@ -33,32 +56,43 @@ function Brand({ footer = false }: { footer?: boolean }) {
   );
 }
 
-export default function Layout() {
+export default function Layout({ children }: { children: ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement>(null);
   const closeMenu = () => setMenuOpen(false);
+
+  useEffect(() => {
+    const header = headerRef.current;
+    if (!header) return;
+    const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <main>
       <ScrollToTop />
-      <header className="site-header">
+      <Motion />
+      <header ref={headerRef} className="site-header">
         <div className="nav-wrap">
           <Brand />
           <nav
             className={menuOpen ? "nav-links open" : "nav-links"}
             aria-label="Main navigation"
           >
-            <NavLink to="/" end onClick={closeMenu}>Home</NavLink>
-            <NavLink to="/services" onClick={closeMenu}>Services</NavLink>
-            <NavLink to="/products" onClick={closeMenu}>Products</NavLink>
-            <NavLink to="/work" onClick={closeMenu}>Work</NavLink>
-            <NavLink to="/training" onClick={closeMenu}>Training</NavLink>
-            <NavLink to="/insights" onClick={closeMenu}>Insights</NavLink>
-            <NavLink to="/contact" onClick={closeMenu}>Contact</NavLink>
-            <Link to="/contact" className="mobile-contact" onClick={closeMenu}>
+            <NavItem href="/" end onClick={closeMenu}>Home</NavItem>
+            <NavItem href="/services" onClick={closeMenu}>Services</NavItem>
+            <NavItem href="/products" onClick={closeMenu}>Products</NavItem>
+            <NavItem href="/work" onClick={closeMenu}>Work</NavItem>
+            <NavItem href="/training" onClick={closeMenu}>Training</NavItem>
+            <NavItem href="/insights" onClick={closeMenu}>Insights</NavItem>
+            <NavItem href="/contact" onClick={closeMenu}>Contact</NavItem>
+            <Link href="/contact" className="mobile-contact" onClick={closeMenu}>
               Contact us <Arrow />
             </Link>
           </nav>
-          <Link to="/contact" className="nav-cta">Start a project <Arrow /></Link>
+          <Link href="/contact" className="nav-cta">Start a project <Arrow /></Link>
           <button
             className={`menu-button ${menuOpen ? "open" : ""}`}
             onClick={() => setMenuOpen(!menuOpen)}
@@ -70,7 +104,7 @@ export default function Layout() {
         </div>
       </header>
 
-      <Outlet />
+      {children}
 
       <WhatsAppButton />
       <footer>
@@ -79,7 +113,7 @@ export default function Layout() {
             <Brand footer />
             <div className="footer-socials">
               <a
-                href="https://www.instagram.com/autosoltechnologies"
+                href="https://www.instagram.com/autosoltechonologies?stkn=YmE5eWhqeGdkbWtp"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -106,21 +140,21 @@ export default function Layout() {
           </div>
           <div className="footer-links">
             <h3>Company</h3>
-            <Link to="/about">About</Link>
-            <Link to="/work">Work</Link>
-            <Link to="/contact">Contact</Link>
+            <Link href="/about">About</Link>
+            <Link href="/work">Work</Link>
+            <Link href="/contact">Contact</Link>
           </div>
           <div className="footer-links">
             <h3>Capabilities</h3>
-            <Link to="/services">AI & Automation</Link>
-            <Link to="/services">Software & Data</Link>
-            <Link to="/training">Training</Link>
+            <Link href="/services">AI & Automation</Link>
+            <Link href="/services">Software & Data</Link>
+            <Link href="/training">Training</Link>
           </div>
           <div className="footer-links">
             <h3>Products</h3>
-            <Link to="/products">AI Core</Link>
-            <Link to="/products">AutoSol CRM</Link>
-            <Link to="/products">Business OS</Link>
+            <Link href="/products">AI Core</Link>
+            <Link href="/products">AutoSol CRM</Link>
+            <Link href="/products">Business OS</Link>
           </div>
         </div>
         <div className="container footer-bottom">

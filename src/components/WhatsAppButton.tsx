@@ -1,3 +1,5 @@
+"use client";
+
 import { useState } from "react";
 
 const WA_NUMBER = "918668686934";

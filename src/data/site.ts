@@ -198,6 +198,11 @@ export type Project = {
   image: string;
   color: string;
   link?: string;
+  overview?: string;
+  challenge?: string;
+  solution?: string[];
+  customization?: string;
+  engineering?: string[];
 };
 
 export const projects: Project[] = [
@@ -250,17 +255,43 @@ export const projects: Project[] = [
     color: "#0d1a2e",
   },
   {
-    name: "Inspiring E-Commerce Website",
+    name: "Inspring Studio",
     slug: "inspring-ecommerce",
-    category: "E-Commerce / Web Development",
+    category: "E-Commerce Platform",
     filterCategories: ["E-Commerce", "Web"],
-    copy: "A modern e-commerce website built for a product-focused online shopping experience.",
-    tech: ["Web", "E-Commerce", "UI/UX"],
+    copy: "A modern commerce experience built to connect product discovery, customization, checkout and order management in one platform.",
+    tech: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "PostgreSQL", "Supabase", "Razorpay"],
     status: "DEVELOPED",
     featured: true,
     link: "https://inspiring.in",
     image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80",
-    color: "#1a1a0d",
+    color: "#0d1a2e",
+    overview: "Inspring Studio is an e-commerce platform developed to provide a structured online shopping experience while giving the business tools to manage products, customers, orders and customized purchases.",
+    challenge: "Create a digital storefront that supports both standard products and customizable products while keeping shopping, payments and order management connected.",
+    solution: [
+      "Product discovery",
+      "Categories and collections",
+      "Product customization",
+      "Cart and wishlist",
+      "Customer accounts",
+      "Address management",
+      "Checkout",
+      "Razorpay payments",
+      "Orders",
+      "Reviews",
+      "Coupons",
+      "Administrative management",
+    ],
+    customization: "Customers can provide customization information and reference images for applicable products.",
+    engineering: [
+      "Secure payment verification",
+      "Database security",
+      "Server-side validation",
+      "Image optimization",
+      "Order data protection",
+      "Audit logging",
+      "Responsive architecture",
+    ],
   },
   {
     name: "Krushnai Amrutulya",
