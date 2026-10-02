@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ScrollToTop from "./ScrollToTop";
@@ -40,13 +39,12 @@ function Brand({ footer = false }: { footer?: boolean }) {
       aria-label="AutoSol Technologies home"
     >
       <span className="brand-image">
-        <Image
-          src="/logo-mark.png"
+        {/* SVG avoids Git LFS pointer issues on Vercel for raster logos */}
+        <img
+          src="/logo-mark.svg"
           alt="AutoSol Technologies logo"
-          priority
           width={48}
           height={48}
-          unoptimized
         />
       </span>
       <span className="brand-type">
