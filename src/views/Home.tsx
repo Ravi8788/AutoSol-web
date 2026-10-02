@@ -108,17 +108,43 @@ export default function Home() {
             </ul>
           </div>
 
-          <aside className="fx-ghost" aria-hidden="true">
-            <div className="fx-ghost-row">
-              <div className="fx-bars">
-                <span /><span /><span /><span /><span />
+          <aside className="fx-stage" aria-hidden="true">
+            <div className="fx-stage-panel">
+              <div className="fx-stage-orbit">
+                <span className="fx-orbit fx-orbit--a" />
+                <span className="fx-orbit fx-orbit--b" />
+                <span className="fx-orbit fx-orbit--c" />
+                <span className="fx-beam fx-beam--1" />
+                <span className="fx-beam fx-beam--2" />
+                <span className="fx-beam fx-beam--3" />
+                <span className="fx-beam fx-beam--4" />
+                <div className="fx-stage-core">
+                  <Image
+                    src="/logo-mark.png"
+                    alt=""
+                    width={200}
+                    height={200}
+                    priority
+                  />
+                </div>
+                <span className="fx-node fx-node--ai">AI</span>
+                <span className="fx-node fx-node--soft">Software</span>
+                <span className="fx-node fx-node--auto">Automation</span>
+                <span className="fx-node fx-node--data">Data</span>
               </div>
-              <p className="fx-kpi"><strong>Live</strong>Connected<br />systems</p>
+              <div className="fx-stage-copy">
+                <div className="fx-ghost-row">
+                  <div className="fx-bars">
+                    <span /><span /><span /><span /><span />
+                  </div>
+                  <p className="fx-kpi"><strong>Live</strong>Connected systems</p>
+                </div>
+                <h2 className="fx-ghost-title">From data to outcome</h2>
+                <p className="fx-ghost-copy">
+                  Business data, software and automation meet in one intelligence layer — then keep improving after launch.
+                </p>
+              </div>
             </div>
-            <h2 className="fx-ghost-title">From data to outcome</h2>
-            <p className="fx-ghost-copy">
-              Business data, software and automation meet in one intelligence layer — then keep improving after launch.
-            </p>
           </aside>
         </div>
 
