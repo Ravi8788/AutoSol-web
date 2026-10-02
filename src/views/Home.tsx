@@ -70,42 +70,6 @@ export default function Home() {
             <p className="fx-sub">
               We build intelligent software, AI systems and automation solutions that turn complex business problems into connected digital experiences.
             </p>
-
-            <div className="fx-cta">
-              <Link className="fx-go" href="/contact">
-                Start a project
-                <span className="fx-go-dot" aria-hidden="true">
-                  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M4 10h12M11 5l5 5-5 5" />
-                  </svg>
-                </span>
-              </Link>
-
-              <div className="fx-proof">
-                <div className="fx-faces" aria-hidden="true">
-                  <i /><i /><i /><i />
-                </div>
-                <span className="fx-proof-text">
-                  <strong>BUILD. AUTOMATE. GROW.</strong>
-                  Kolhapur · India
-                </span>
-              </div>
-            </div>
-
-            <ul className="fx-stats">
-              <li className="fx-stat">
-                <span className="fx-stat-mark" aria-hidden="true">*</span>
-                <span className="fx-stat-value">17+</span>
-                <span className="fx-stat-label">Capabilities we build</span>
-                <span className="fx-stat-rule" aria-hidden="true" />
-              </li>
-              <li className="fx-stat">
-                <span className="fx-stat-mark" aria-hidden="true">*</span>
-                <span className="fx-stat-value">12 mo</span>
-                <span className="fx-stat-label">Technology Care</span>
-                <span className="fx-stat-rule" aria-hidden="true" />
-              </li>
-            </ul>
           </div>
 
           <aside className="fx-stage" aria-hidden="true">
@@ -172,6 +136,44 @@ export default function Home() {
               </div>
             </div>
           </aside>
+
+          <div className="fx-actions">
+            <div className="fx-cta">
+              <Link className="fx-go" href="/contact">
+                Start a project
+                <span className="fx-go-dot" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 10h12M11 5l5 5-5 5" />
+                  </svg>
+                </span>
+              </Link>
+
+              <div className="fx-proof">
+                <div className="fx-faces" aria-hidden="true">
+                  <i /><i /><i /><i />
+                </div>
+                <span className="fx-proof-text">
+                  <strong>BUILD. AUTOMATE. GROW.</strong>
+                  Kolhapur · India
+                </span>
+              </div>
+            </div>
+
+            <ul className="fx-stats">
+              <li className="fx-stat">
+                <span className="fx-stat-mark" aria-hidden="true">*</span>
+                <span className="fx-stat-value">17+</span>
+                <span className="fx-stat-label">Capabilities we build</span>
+                <span className="fx-stat-rule" aria-hidden="true" />
+              </li>
+              <li className="fx-stat">
+                <span className="fx-stat-mark" aria-hidden="true">*</span>
+                <span className="fx-stat-value">12 mo</span>
+                <span className="fx-stat-label">Technology Care</span>
+                <span className="fx-stat-rule" aria-hidden="true" />
+              </li>
+            </ul>
+          </div>
         </div>
 
         <div className="fx-foot">
@@ -199,7 +201,7 @@ export default function Home() {
               <div className={item === "AI" ? "flow-item active" : "flow-item"} key={item}>
                 <i>{String(index + 1).padStart(2, "0")}</i>
                 <strong>{item}</strong>
-                {index < 4 && <Arrow />}
+                {index < 4 && <span className="flow-arrow" aria-hidden="true">→</span>}
               </div>
             ))}
           </div>
