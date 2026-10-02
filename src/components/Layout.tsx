@@ -46,6 +46,7 @@ function Brand({ footer = false }: { footer?: boolean }) {
           priority
           width={48}
           height={48}
+          unoptimized
         />
       </span>
       <span className="brand-type">
