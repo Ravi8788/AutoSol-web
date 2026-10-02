@@ -4976,8 +4976,78 @@ footer {
   margin-inline: auto;
 }
 
+.fx-orbit {
+  position: relative;
+  width: 100%;
+  padding: 28px 22px 26px;
+  animation: fx-orbit-in 0.9s var(--ease) both;
+}
+
+.fx-float-card {
+  position: absolute;
+  z-index: 4;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  max-width: min(58%, 190px);
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.78);
+  color: #0b1b33;
+  box-shadow:
+    0 14px 34px rgba(8, 28, 68, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(14px) saturate(1.15);
+  -webkit-backdrop-filter: blur(14px) saturate(1.15);
+  animation: fx-card-float 5.8s ease-in-out infinite;
+}
+
+.fx-float-card strong {
+  font-size: 12px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.fx-float-icon {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  flex: none;
+  border-radius: 9px;
+  background: linear-gradient(145deg, rgba(0, 87, 230, 0.12), rgba(58, 160, 255, 0.18));
+  color: #0057e6;
+}
+
+.fx-float-icon svg {
+  width: 15px;
+  height: 15px;
+}
+
+.fx-float-card--tr {
+  top: 2%;
+  right: 0;
+  animation-delay: 0s;
+}
+
+.fx-float-card--ml {
+  top: 42%;
+  left: 0;
+  animation-name: fx-card-float-ml;
+  animation-delay: 0.9s;
+}
+
+.fx-float-card--br {
+  right: 2%;
+  bottom: 4%;
+  animation-delay: 1.7s;
+}
+
 .fx-core-panel {
   position: relative;
+  z-index: 1;
   width: 100%;
   min-height: 0;
   padding: 12px;
@@ -5276,6 +5346,27 @@ footer {
   50% { transform: translateY(-6px); }
 }
 
+@keyframes fx-card-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes fx-card-float-ml {
+  0%, 100% { transform: translateY(-50%); }
+  50% { transform: translateY(calc(-50% - 8px)); }
+}
+
+@keyframes fx-orbit-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 @keyframes fx-flow {
   0% { left: 8%; opacity: 0; }
   12% { opacity: 1; }
@@ -5403,6 +5494,10 @@ footer {
     z-index: 1;
   }
 
+  .fx-orbit {
+    padding: 32px 28px 30px;
+  }
+
   .fx-core-panel {
     padding: 14px;
   }
@@ -5463,6 +5558,32 @@ footer {
     width: 100%;
     max-width: 100%;
     margin-inline: 0;
+  }
+
+  .fx-orbit {
+    padding: 24px 12px 22px;
+  }
+
+  .fx-float-card {
+    max-width: min(52%, 150px);
+    gap: 8px;
+    padding: 8px 10px;
+    border-radius: 14px;
+  }
+
+  .fx-float-card strong {
+    font-size: 10.5px;
+  }
+
+  .fx-float-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 8px;
+  }
+
+  .fx-float-icon svg {
+    width: 13px;
+    height: 13px;
   }
 
   .fx-core-panel {
@@ -5531,6 +5652,9 @@ footer {
     width: 100%;
     max-width: 100%;
   }
+  .fx-orbit { padding: 22px 8px 20px; }
+  .fx-float-card--ml { left: -2px; }
+  .fx-float-card--tr { right: -2px; }
   .fx-core-map {
     width: 100%;
     max-height: none;
@@ -5547,7 +5671,9 @@ footer {
   .fx-core-ring,
   .fx-dot,
   .fx-sat,
+  .fx-float-card,
   .fx-core-status i { animation: none; }
+  .fx-orbit,
   .fx-note,
   .hero.fx .fx-title,
   .fx-sub,
@@ -5628,17 +5754,18 @@ footer {
 
 .hero.fx .fx-sky {
   background:
-    radial-gradient(ellipse 70% 55% at 78% 42%, rgba(0, 140, 255, 0.18), transparent 62%),
-    radial-gradient(ellipse 40% 50% at 88% 70%, rgba(26, 140, 255, 0.12), transparent 60%),
-    linear-gradient(165deg, #ffffff 0%, #e7f3ff 70%);
+    radial-gradient(ellipse 58% 48% at 78% 38%, rgba(0, 120, 255, 0.2), transparent 64%),
+    radial-gradient(ellipse 42% 46% at 92% 72%, rgba(58, 160, 255, 0.16), transparent 60%),
+    radial-gradient(ellipse 36% 30% at 62% 18%, rgba(126, 200, 255, 0.18), transparent 70%),
+    linear-gradient(165deg, #ffffff 0%, #eef6ff 55%, #e7f3ff 100%);
 }
 
 .hero.fx .fx-glow--a {
-  background: radial-gradient(circle at 72% 38%, rgba(0, 87, 230, 0.16), transparent 42%);
+  background: radial-gradient(circle at 72% 38%, rgba(0, 87, 230, 0.14), transparent 44%);
 }
 
 .hero.fx .fx-glow--b {
-  background: radial-gradient(circle at 90% 62%, rgba(26, 140, 255, 0.14), transparent 36%);
+  background: radial-gradient(circle at 90% 62%, rgba(26, 140, 255, 0.12), transparent 40%);
 }
 
 .hero.fx .fx-grid {
