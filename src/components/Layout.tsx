@@ -43,7 +43,7 @@ function Brand({ footer = false }: { footer?: boolean }) {
         src="/logo-full.jpg"
         alt="AutoSol Technologies — Build. Automate. Grow."
         width={256}
-        height={102}
+        height={87}
       />
     </Link>
   );
