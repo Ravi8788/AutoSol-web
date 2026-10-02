@@ -109,40 +109,66 @@ export default function Home() {
           </div>
 
           <aside className="fx-stage" aria-hidden="true">
-            <div className="fx-stage-panel">
-              <div className="fx-stage-orbit">
-                <span className="fx-orbit fx-orbit--a" />
-                <span className="fx-orbit fx-orbit--b" />
-                <span className="fx-orbit fx-orbit--c" />
-                <span className="fx-beam fx-beam--1" />
-                <span className="fx-beam fx-beam--2" />
-                <span className="fx-beam fx-beam--3" />
-                <span className="fx-beam fx-beam--4" />
-                <div className="fx-stage-core">
-                  <Image
-                    src="/logo-mark.png"
-                    alt=""
-                    width={200}
-                    height={200}
-                    priority
-                  />
-                </div>
-                <span className="fx-node fx-node--ai">AI</span>
-                <span className="fx-node fx-node--soft">Software</span>
-                <span className="fx-node fx-node--auto">Automation</span>
-                <span className="fx-node fx-node--data">Data</span>
+            <div className="fx-core-panel">
+              <div className="fx-core-top">
+                <span className="fx-core-status"><i />AUTOSOL SYSTEM</span>
+                <span className="fx-core-connected">CONNECTED</span>
               </div>
-              <div className="fx-stage-copy">
-                <div className="fx-ghost-row">
-                  <div className="fx-bars">
-                    <span /><span /><span /><span /><span />
-                  </div>
-                  <p className="fx-kpi"><strong>Live</strong>Connected systems</p>
+
+              <div className="fx-core-map">
+                <span className="fx-core-ring fx-core-ring--a" />
+                <span className="fx-core-ring fx-core-ring--b" />
+                <span className="fx-core-ring fx-core-ring--c" />
+                <span className="fx-core-ring fx-core-ring--d" />
+
+                <div className="fx-spoke fx-spoke--tl">
+                  <span className="fx-dot" /><span className="fx-dot" /><span className="fx-dot" />
                 </div>
-                <h2 className="fx-ghost-title">From data to outcome</h2>
-                <p className="fx-ghost-copy">
-                  Business data, software and automation meet in one intelligence layer — then keep improving after launch.
-                </p>
+                <div className="fx-spoke fx-spoke--tr">
+                  <span className="fx-dot" /><span className="fx-dot" /><span className="fx-dot" />
+                </div>
+                <div className="fx-spoke fx-spoke--bl">
+                  <span className="fx-dot" /><span className="fx-dot" /><span className="fx-dot" />
+                </div>
+                <div className="fx-spoke fx-spoke--br">
+                  <span className="fx-dot" /><span className="fx-dot" /><span className="fx-dot" />
+                </div>
+
+                <div className="fx-core-hub">
+                  <small>AUTOSOL</small>
+                  <strong>AI CORE</strong>
+                  <em>INTELLIGENCE LAYER</em>
+                </div>
+
+                <div className="fx-sat fx-sat--tl">
+                  <span className="fx-sat-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg>
+                  </span>
+                  BUSINESS DATA
+                </div>
+                <div className="fx-sat fx-sat--tr">
+                  <span className="fx-sat-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M7 7h11l-3-3M17 17H6l3 3"/><path d="M18 7v4M6 13v4"/></svg>
+                  </span>
+                  AUTOMATION
+                </div>
+                <div className="fx-sat fx-sat--bl">
+                  <span className="fx-sat-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M8 8 4 12l4 4M16 8l4 4-4 4M13 5l-2 14"/></svg>
+                  </span>
+                  SOFTWARE
+                </div>
+                <div className="fx-sat fx-sat--br">
+                  <span className="fx-sat-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6"><path d="M4 16 9 11l4 4 7-8"/><path d="M15 7h5v5"/></svg>
+                  </span>
+                  OUTCOME
+                </div>
+              </div>
+
+              <div className="fx-core-bottom">
+                <span className="fx-core-status"><i />Data flowing</span>
+                <span className="fx-core-meta">API · AI · WORK</span>
               </div>
             </div>
           </aside>
